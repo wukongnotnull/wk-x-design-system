@@ -1,0 +1,67 @@
+:root {
+  --dark-background: 0 0 0;
+  --dim-background: 22 33 44;
+  --light-background: 255 255 255;
+  --dark-search-background: 32 35 39;
+  --dim-search-background: 39 51 64;
+  --light-search-background: 239 243 244;
+  --dark-sidebar-background: 22 24 28;
+  --dim-sidebar-background: 30 39 50;
+  --light-sidebar-background: 247 249 249;
+
+  --accent-yellow: 255 213 0;
+  --accent-blue: 29 155 240;
+  --accent-pink: 249 26 130;
+  --accent-purple: 120 87 255;
+  --accent-orange: 255 122 0;
+  --accent-green: 0 184 122;
+  --accent-red: 244 33 46;
+
+  --twitter-icon: #D6D9DB;
+  --image-preview-hover: #272C30;
+
+  --text-light-primary: #0F1419;
+  --text-light-secondary: #536471;
+  --text-dark-primary: #E7E9EA;
+  --text-dark-secondary: #71767B;
+  --border-light: #EFF3F4;
+  --border-dark: #2F3336;
+  --reply-line-light: #CFD9DE;
+  --reply-line-dark: #333639;
+
+  --radius-full: 9999px;
+  --radius-2xl: 16px;
+  --radius-md: 6px;
+
+  --main-accent: var(--accent-blue);
+}
+
+html[data-theme="lights-out"] {
+  --main-background: var(--dark-background);
+  --main-search-background: var(--dark-search-background);
+  --main-sidebar-background: var(--dark-sidebar-background);
+  --text-primary: var(--text-dark-primary);
+  --text-secondary: var(--text-dark-secondary);
+  --border: var(--border-dark);
+  --reply-line: var(--reply-line-dark);
+}
+
+html[data-theme="dim"] {
+  --main-background: var(--dim-background);
+  --main-search-background: var(--dim-search-background);
+  --main-sidebar-background: var(--dim-sidebar-background);
+  --text-primary: var(--text-dark-primary);
+  --text-secondary: var(--text-dark-secondary);
+  --border: var(--border-dark);
+  --reply-line: var(--reply-line-dark);
+}
+
+html[data-theme="default"] {
+  --main-background: var(--light-background);
+  --main-search-background: var(--light-search-background);
+  --main-sidebar-background: var(--light-sidebar-background);
+  --text-primary: var(--text-light-primary);
+  --text-secondary: var(--text-light-secondary);
+  --border: var(--border-light);
+  --reply-line: var(--reply-line-light);
+}

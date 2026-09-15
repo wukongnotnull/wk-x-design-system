@@ -1,0 +1,337 @@
+{
+  "commit": "62a9588",
+  "repo": "ccrsxx/twitter-clone",
+  "heroicons": "@heroicons/react@2.0.11",
+  "icons": [
+    {
+      "id": "AppleIcon",
+      "source": "custom-icon.tsx@62a9588",
+      "variant": "custom",
+      "file": "AppleIcon.svg"
+    },
+    {
+      "id": "ArchiveBoxXMarkIcon",
+      "source": "heroicons@2.0.11",
+      "variant": "outline",
+      "file": "ArchiveBoxXMarkIcon.svg"
+    },
+    {
+      "id": "ArrowLeftIcon",
+      "source": "heroicons@2.0.11",
+      "variant": "outline",
+      "file": "ArrowLeftIcon.svg"
+    },
+    {
+      "id": "ArrowPathIcon",
+      "source": "heroicons@2.0.11",
+      "variant": "outline",
+      "file": "ArrowPathIcon.svg"
+    },
+    {
+      "id": "ArrowPathRoundedSquareIcon",
+      "source": "heroicons@2.0.11",
+      "variant": "outline",
+      "file": "ArrowPathRoundedSquareIcon.svg"
+    },
+    {
+      "id": "ArrowRightIcon",
+      "source": "heroicons@2.0.11",
+      "variant": "outline",
+      "file": "ArrowRightIcon.svg"
+    },
+    {
+      "id": "ArrowRightOnRectangleIcon",
+      "source": "heroicons@2.0.11",
+      "variant": "outline",
+      "file": "ArrowRightOnRectangleIcon.svg"
+    },
+    {
+      "id": "ArrowUpRightIcon",
+      "source": "heroicons@2.0.11",
+      "variant": "outline",
+      "file": "ArrowUpRightIcon.svg"
+    },
+    {
+      "id": "ArrowUpTrayIcon",
+      "source": "heroicons@2.0.11",
+      "variant": "outline",
+      "file": "ArrowUpTrayIcon.svg"
+    },
+    {
+      "id": "Bars3BottomLeftIcon",
+      "source": "heroicons@2.0.11",
+      "variant": "outline",
+      "file": "Bars3BottomLeftIcon.svg"
+    },
+    {
+      "id": "BellIcon",
+      "source": "heroicons@2.0.11",
+      "variant": "outline",
+      "file": "BellIcon.svg"
+    },
+    {
+      "id": "BookmarkIcon",
+      "source": "heroicons@2.0.11",
+      "variant": "outline",
+      "file": "BookmarkIcon.svg"
+    },
+    {
+      "id": "BookmarkSlashIcon",
+      "source": "heroicons@2.0.11",
+      "variant": "outline",
+      "file": "BookmarkSlashIcon.svg"
+    },
+    {
+      "id": "CalendarDaysIcon",
+      "source": "heroicons@2.0.11",
+      "variant": "outline",
+      "file": "CalendarDaysIcon.svg"
+    },
+    {
+      "id": "CameraIcon",
+      "source": "heroicons@2.0.11",
+      "variant": "outline",
+      "file": "CameraIcon.svg"
+    },
+    {
+      "id": "ChartBarIcon",
+      "source": "heroicons@2.0.11",
+      "variant": "outline",
+      "file": "ChartBarIcon.svg"
+    },
+    {
+      "id": "ChartPieIcon",
+      "source": "heroicons@2.0.11",
+      "variant": "outline",
+      "file": "ChartPieIcon.svg"
+    },
+    {
+      "id": "ChatBubbleBottomCenterTextIcon",
+      "source": "heroicons@2.0.11",
+      "variant": "outline",
+      "file": "ChatBubbleBottomCenterTextIcon.svg"
+    },
+    {
+      "id": "ChatBubbleOvalLeftIcon",
+      "source": "heroicons@2.0.11",
+      "variant": "outline",
+      "file": "ChatBubbleOvalLeftIcon.svg"
+    },
+    {
+      "id": "CheckBadgeIcon",
+      "source": "heroicons@2.0.11",
+      "variant": "solid",
+      "file": "CheckBadgeIcon.svg"
+    },
+    {
+      "id": "CheckIcon",
+      "source": "heroicons@2.0.11",
+      "variant": "outline",
+      "file": "CheckIcon.svg"
+    },
+    {
+      "id": "ChevronDownIcon",
+      "source": "heroicons@2.0.11",
+      "variant": "outline",
+      "file": "ChevronDownIcon.svg"
+    },
+    {
+      "id": "ChevronRightIcon",
+      "source": "heroicons@2.0.11",
+      "variant": "outline",
+      "file": "ChevronRightIcon.svg"
+    },
+    {
+      "id": "Cog8ToothIcon",
+      "source": "heroicons@2.0.11",
+      "variant": "outline",
+      "file": "Cog8ToothIcon.svg"
+    },
+    {
+      "id": "EllipsisHorizontalCircleIcon",
+      "source": "heroicons@2.0.11",
+      "variant": "outline",
+      "file": "EllipsisHorizontalCircleIcon.svg"
+    },
+    {
+      "id": "EllipsisHorizontalIcon",
+      "source": "heroicons@2.0.11",
+      "variant": "outline",
+      "file": "EllipsisHorizontalIcon.svg"
+    },
+    {
+      "id": "EnvelopeIcon",
+      "source": "heroicons@2.0.11",
+      "variant": "outline",
+      "file": "EnvelopeIcon.svg"
+    },
+    {
+      "id": "ExclamationTriangleIcon",
+      "source": "heroicons@2.0.11",
+      "variant": "outline",
+      "file": "ExclamationTriangleIcon.svg"
+    },
+    {
+      "id": "FaceSmileIcon",
+      "source": "heroicons@2.0.11",
+      "variant": "outline",
+      "file": "FaceSmileIcon.svg"
+    },
+    {
+      "id": "FeatherIcon",
+      "source": "custom-icon.tsx@62a9588",
+      "variant": "custom",
+      "file": "FeatherIcon.svg"
+    },
+    {
+      "id": "GifIcon",
+      "source": "heroicons@2.0.11",
+      "variant": "outline",
+      "file": "GifIcon.svg"
+    },
+    {
+      "id": "GlobeAmericasIcon",
+      "source": "heroicons@2.0.11",
+      "variant": "outline",
+      "file": "GlobeAmericasIcon.svg"
+    },
+    {
+      "id": "GoogleIcon",
+      "source": "custom-icon.tsx@62a9588",
+      "variant": "custom",
+      "file": "GoogleIcon.svg"
+    },
+    {
+      "id": "HashtagIcon",
+      "source": "heroicons@2.0.11",
+      "variant": "outline",
+      "file": "HashtagIcon.svg"
+    },
+    {
+      "id": "HeartIcon",
+      "source": "heroicons@2.0.11",
+      "variant": "outline",
+      "file": "HeartIcon.svg"
+    },
+    {
+      "id": "HomeIcon",
+      "source": "heroicons@2.0.11",
+      "variant": "outline",
+      "file": "HomeIcon.svg"
+    },
+    {
+      "id": "LinkIcon",
+      "source": "heroicons@2.0.11",
+      "variant": "outline",
+      "file": "LinkIcon.svg"
+    },
+    {
+      "id": "MagnifyingGlassIcon",
+      "source": "heroicons@2.0.11",
+      "variant": "outline",
+      "file": "MagnifyingGlassIcon.svg"
+    },
+    {
+      "id": "MapPinIcon",
+      "source": "heroicons@2.0.11",
+      "variant": "outline",
+      "file": "MapPinIcon.svg"
+    },
+    {
+      "id": "PaintBrushIcon",
+      "source": "heroicons@2.0.11",
+      "variant": "outline",
+      "file": "PaintBrushIcon.svg"
+    },
+    {
+      "id": "PhotoIcon",
+      "source": "heroicons@2.0.11",
+      "variant": "outline",
+      "file": "PhotoIcon.svg"
+    },
+    {
+      "id": "PinIcon",
+      "source": "custom-icon.tsx@62a9588",
+      "variant": "custom",
+      "file": "PinIcon.svg"
+    },
+    {
+      "id": "PinOffIcon",
+      "source": "custom-icon.tsx@62a9588",
+      "variant": "custom",
+      "file": "PinOffIcon.svg"
+    },
+    {
+      "id": "PlusIcon",
+      "source": "heroicons@2.0.11",
+      "variant": "outline",
+      "file": "PlusIcon.svg"
+    },
+    {
+      "id": "QuestionMarkCircleIcon",
+      "source": "heroicons@2.0.11",
+      "variant": "outline",
+      "file": "QuestionMarkCircleIcon.svg"
+    },
+    {
+      "id": "SparklesIcon",
+      "source": "heroicons@2.0.11",
+      "variant": "outline",
+      "file": "SparklesIcon.svg"
+    },
+    {
+      "id": "SpinnerIcon",
+      "source": "custom-icon.tsx@62a9588",
+      "variant": "custom",
+      "file": "SpinnerIcon.svg"
+    },
+    {
+      "id": "TrashIcon",
+      "source": "heroicons@2.0.11",
+      "variant": "outline",
+      "file": "TrashIcon.svg"
+    },
+    {
+      "id": "TriangleIcon",
+      "source": "custom-icon.tsx@62a9588",
+      "variant": "custom",
+      "file": "TriangleIcon.svg"
+    },
+    {
+      "id": "TwitterIcon",
+      "source": "custom-icon.tsx@62a9588",
+      "variant": "custom",
+      "file": "TwitterIcon.svg"
+    },
+    {
+      "id": "UserGroupIcon",
+      "source": "heroicons@2.0.11",
+      "variant": "outline",
+      "file": "UserGroupIcon.svg"
+    },
+    {
+      "id": "UserIcon",
+      "source": "heroicons@2.0.11",
+      "variant": "outline",
+      "file": "UserIcon.svg"
+    },
+    {
+      "id": "UserMinusIcon",
+      "source": "heroicons@2.0.11",
+      "variant": "outline",
+      "file": "UserMinusIcon.svg"
+    },
+    {
+      "id": "UserPlusIcon",
+      "source": "heroicons@2.0.11",
+      "variant": "outline",
+      "file": "UserPlusIcon.svg"
+    },
+    {
+      "id": "XMarkIcon",
+      "source": "heroicons@2.0.11",
+      "variant": "outline",
+      "file": "XMarkIcon.svg"
+    }
+  ]
+}
