@@ -716,6 +716,64 @@ class HtmlChromeTest(unittest.TestCase):
         self.assertIn(".stats-modal", css)
         self.assertIn(".stats-modal-header", css)
 
+    # Responsive recipe — clone 62a9588 screens: xs 500, md 768, lg 1024, xl 1280.
+
+    @staticmethod
+    def media_block(css: str, query: str) -> str:
+        """Concatenate every top-level block that opens with `query`."""
+        blocks = []
+        start = css.find(query)
+        if start == -1:
+            raise AssertionError(f"no block for {query}")
+        while start != -1:
+            depth = 0
+            for i in range(start, len(css)):
+                if css[i] == "{":
+                    depth += 1
+                elif css[i] == "}":
+                    depth -= 1
+                    if depth == 0:
+                        blocks.append(css[start : i + 1])
+                        break
+            else:
+                raise AssertionError(f"unterminated block for {query}")
+            start = css.find(query, i + 1)
+        return "\n".join(blocks)
+
+    def test_sidebar_icon_only_below_xl(self):
+        sidebar = HTML[HTML.index('data-pattern="sidebar"') : HTML.index('class="home-main"')]
+        self.assertIn('class="nav-label"', sidebar)
+        self.assertIn('class="nav-feather"', sidebar)
+        self.assertIn("M23 3c-6.62-.1-10.38 2.421", sidebar)  # FeatherIcon from showcase/icons
+        block = self.media_block(SITE, "@media (max-width: 1279px)")
+        self.assertIn(".sidebar-demo .nav-label", block)
+        self.assertIn("display: none", block)
+        self.assertIn("80px minmax(0, 576px) 384px", block)
+        md = self.media_block(SITE, "@media (min-width: 768px) and (max-width: 1279px)")
+        self.assertIn("96px", md)
+
+    def test_aside_hidden_below_lg(self):
+        block = self.media_block(SITE, "@media (max-width: 1023px)")
+        self.assertIn(".aside-stack", block)
+        self.assertIn("display: none", block)
+        self.assertIn("80px minmax(0, 576px)", block)
+        self.assertNotIn("384px", block)
+
+    def test_sidebar_bottom_bar_below_xs(self):
+        sidebar = HTML[HTML.index('data-pattern="sidebar"') : HTML.index('class="home-main"')]
+        for hidden in ("HashtagIcon", "BookmarkIcon", "Bars3BottomLeftIcon"):
+            self.assertRegex(sidebar, rf'data-nav-icon="{hidden}"[^>]*data-can-hide')
+        self.assertNotRegex(sidebar, r'data-nav-icon="HomeIcon"[^>]*data-can-hide')
+        block = self.media_block(SITE, "@media (max-width: 499px)")
+        self.assertIn(".sidebar-demo", block)
+        self.assertIn("position: fixed", block)
+        self.assertIn("bottom: 0", block)
+        self.assertIn("[data-can-hide]", block)
+        self.assertIn(".sidebar-demo .logo-mark", block)
+        self.assertIn("bottom: 72px", block)
+        self.assertIn(".home-main", block)
+        self.assertIn("border-left: 0", block)
+
 
 if __name__ == "__main__":
     unittest.main()

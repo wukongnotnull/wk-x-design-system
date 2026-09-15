@@ -2,7 +2,7 @@
 
 Live catalog distilled from https://github.com/ccrsxx/twitter-clone (`62a9588`). Do not re-clone that repo for tokens.
 
-**Root:** `showcase/` next to `SKILL.md` (`/Users/wukong/.agents/skills/wk-x-design-system/showcase`)
+**Root:** `showcase/` next to `SKILL.md` (resolve from the directory containing this file)
 
 **Open:** `showcase/index.html` (or `python3 -m http.server` from `showcase/`)
 
@@ -25,7 +25,7 @@ For each task: grep `showcase/site.css` for the selector column. Markup is in `s
 | Icons | `#icons` | `[data-icon]`, `showcase/icons/` | `.icon-grid`, `.icon-swatch` |
 | Home shell | `#patterns` | `[data-pattern="home"]` | `.home-shell`, `.home-main` |
 | Tweet row | `#patterns` | `[data-pattern="tweet"]` | `.tweet-card`, `.hover-card`, `.accent-tab`, `.tweet-status`, `.tweet-verified`, `.tweet-more`, `.tweet-rail`, `.reply-line`, `.media-grid`, `.tweet-actions`, `.disc`, `.tweet-count`, `.like.is-liked`, `.retweet.is-retweeted` |
-| Sidebar | `#patterns` | `[data-pattern="sidebar"]` | `.sidebar-demo`, `[data-nav-icon]`, `.logo-mark` |
+| Sidebar | `#patterns` | `[data-pattern="sidebar"]`, `[data-nav-icon]` | `.sidebar-demo`, `.logo-mark` |
 | Overflow menu | `#patterns` | `[data-pattern="menu"]` | `.menu-demo` |
 | Blur header | `#patterns` | `[data-pattern="header"]` | `.header-demo` |
 | Trends | `#patterns` | `[data-pattern="trends"]` | `.aside-card`, `.trend-row`, `.aside-more` |
@@ -52,6 +52,12 @@ For each task: grep `showcase/site.css` for the selector column. Markup is in `s
 | Mobile sidebar | `#patterns` | `[data-pattern="mobile-sidebar"]` | `.mobile-sidebar`, `.mobile-sidebar-panel` |
 | Reply modal | `#patterns` | `[data-pattern="reply-modal"]` | `.reply-modal`, `.reply-modal-panel` |
 | Stats modal | `#patterns` | `[data-pattern="stats-modal"]` | `.stats-modal`, `.stats-modal-header` |
-| Hide left rail < 500px | layout | `#rail` | `@media (max-width: 499px)` |
+| Hide catalog rail < 500px | layout | `#rail` | `@media (max-width: 499px)` |
+| Responsive: icon-only sidebar < 1280 (xl) | `#patterns` | `[data-pattern="sidebar"]`, `.nav-label`, `.nav-feather` | `@media (max-width: 1279px)`, `.sidebar-demo .nav-label`, `.sidebar-demo .nav-feather` |
+| Responsive: sidebar 96px at 768–1279 (md) | `#patterns` | `[data-pattern="sidebar"]` | `@media (min-width: 768px) and (max-width: 1279px)` |
+| Responsive: aside removed < 1024 (lg) | `#patterns` | `.aside-stack` | `@media (max-width: 1023px)` |
+| Responsive: bottom tab bar < 500 (xs) | `#patterns` | `[data-pattern="sidebar"]`, `[data-can-hide]` | `@media (max-width: 499px)`, `.sidebar-demo a[data-can-hide]`, `.sidebar-demo .tweet-cta` |
+
+Breakpoints come from the clone's `tailwind.config.js` at `62a9588`: `xs 500px`, then Tailwind defaults `sm 640 / md 768 / lg 1024 / xl 1280`. Sidebar labels show at `xl` only; `data-can-hide` marks the clone's `canBeHidden` links (Explore, Bookmarks, Lists), which drop from the mobile bar.
 
 `theme.js` only shows how to persist `xds-theme` / `xds-accent`. Do not copy it unless the user asked for a theme switcher. The `#theme-bar` picker is catalog chrome — leave the product accent blue.
