@@ -740,14 +740,18 @@ class HtmlChromeTest(unittest.TestCase):
         self.assertIn("auth-or", landing)
         self.assertIn("M24 9.5c3.54 0 6.71 1.22", landing)
         self.assertIn("M16.365 1.43c0 1.14", landing)
-        modal = html[html.index('data-pattern="login-modal"') :]
+        modal = html[html.index('data-pattern="login-modal"') : html.index('data-pattern="signup-aside"')]
         self.assertIn("See what's happening", modal)
         self.assertIn("login-modal-backdrop", modal)
         self.assertIn("login-modal-panel", modal)
         self.assertIn('aria-label="Back"', modal)
+        self.assertIn("M24 9.5c3.54 0 6.71 1.22", modal)
+        self.assertIn("M16.365 1.43c0 1.14", modal)
         aside = html[html.index('data-pattern="signup-aside"') :]
         self.assertIn("Log in or sign up for X", aside)
         self.assertIn("Log in with username or email", aside)
+        self.assertIn("M24 9.5c3.54 0 6.71 1.22", aside)
+        self.assertIn("M15.75 6a3.75 3.75 0 11-7.5 0", aside)
         self.assertIn(".auth-landing", css)
         self.assertIn(".btn-social", css)
         self.assertIn(".auth-field", css)

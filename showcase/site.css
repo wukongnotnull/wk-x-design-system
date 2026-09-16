@@ -2229,6 +2229,7 @@ html[data-theme="dim"] .user-hover-card {
 .btn-auth {
   width: 100%;
   min-width: 0;
+  padding: 8px 16px;
 }
 
 .btn-social {
