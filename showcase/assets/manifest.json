@@ -1,0 +1,24 @@
+{
+  "repo": "ccrsxx/twitter-clone",
+  "commit": "62a9588",
+  "source_dir": "public/assets",
+  "captured": "2026-09-16",
+  "license": "MIT (ccrsxx/twitter-clone LICENSE). twitter-banner.png reproduces Twitter's login-page illustration; brand rights stay with X Corp. Use it only inside auth-landing-clone, never as product marketing art.",
+  "policy": "Rasters live only in showcase/assets/. Do not download, re-fetch, or add others without refreshing the pin.",
+  "assets": [
+    {
+      "file": "no-likes.png",
+      "source": "ccrsxx/twitter-clone@62a9588 public/assets/no-likes.png",
+      "git_blob": "c01e640cc162b6b1715ca30e7a872e0f11fa95c5",
+      "pixels": "800x400",
+      "used_by": ["stats-empty"]
+    },
+    {
+      "file": "twitter-banner.png",
+      "source": "ccrsxx/twitter-clone@62a9588 public/assets/twitter-banner.png",
+      "git_blob": "bca76e344b0f148ac1a4bee45985315cdfd0b6ad",
+      "pixels": "1302x955",
+      "used_by": ["auth-landing-clone"]
+    }
+  ]
+}
