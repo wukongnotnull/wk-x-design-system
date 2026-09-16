@@ -78,6 +78,12 @@ REQUIRED = (
     "UserMinusIcon",
     "UserPlusIcon",
     "XLogoIcon",
+    "AutoIcon",
+    "FocusModeIcon",
+    "GrokHistoryIcon",
+    "MicIcon",
+    "PrivateIcon",
+    "ViewsIcon",
     "XMarkIcon",
 )
 

@@ -85,6 +85,9 @@ For each task: grep `showcase/site.css` for the selector column. Markup is in `s
 | Composer preview 4-up | `#patterns` | `[data-pattern="composer-preview"]` | `.composer-preview-demo`, `.media-remove` |
 | Status count text | `#patterns` | `[data-pattern="status-counts"]` | `.status-counts` |
 | Missing account | `#patterns` | `[data-pattern="account-missing"]` | `.account-missing` |
+| Grok page chrome | `#patterns` | `[data-pattern="grok"]` | `.grok-demo`, `.grok-prompt`, `.voice-bars` |
+| Premium page chrome | `#patterns` | `[data-pattern="premium"]` | `.premium-demo`, `.premium-card`, `.premium-upgrade` |
+| Articles editor chrome | `#patterns` | `[data-pattern="articles"]` | `.articles-demo`, `.article-draft`, `.articles-empty` |
 | Hide catalog rail < 500px | layout | `#rail` | `@media (max-width: 499px)` |
 | Responsive: icon-only sidebar < 1280 (xl) | `#patterns` | `[data-pattern="sidebar"]`, `.nav-label`, `.nav-feather` | `@media (max-width: 1279px)`, `.sidebar-demo .nav-label`, `.sidebar-demo .nav-feather` |
 | Responsive: sidebar 96px at 768–1279 (md) | `#patterns` | `[data-pattern="sidebar"]` | `@media (min-width: 768px) and (max-width: 1279px)` |

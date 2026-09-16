@@ -147,6 +147,9 @@ class HtmlChromeTest(unittest.TestCase):
             "composer-preview",
             "status-counts",
             "account-missing",
+            "grok",
+            "premium",
+            "articles",
         ):
             self.assertIn(f'data-pattern="{pattern}"', html)
         self.assertIn("Pinned Tweet", html)
@@ -819,7 +822,7 @@ class HtmlChromeTest(unittest.TestCase):
         self.assertIn('class="views"', metrics)
         self.assertIn('class="bookmark"', metrics)
         self.assertIn("699K", metrics)
-        self.assertIn("M3 13.125C3 12.504", metrics)
+        self.assertIn("M8.75 21V3h2v18h-2z", metrics)
         self.assertIn("M17.593 3.322", metrics)
         self.assertIn('class="status-detail" data-pattern="post-detail"', html)
         detail = html[html.index('data-pattern="post-detail"') :]
@@ -921,6 +924,48 @@ class HtmlChromeTest(unittest.TestCase):
         self.assertIn(".poll-choice", css)
         self.assertIn(".poll-remove", css)
         self.assertIn("color: rgb(var(--accent-red))", css)
+
+
+    def test_shell_fill(self):
+        html = (ROOT / "index.html").read_text(encoding="utf-8")
+        css = (ROOT / "site.css").read_text(encoding="utf-8")
+        grok = html[html.index('data-pattern="grok"') : html.index('data-pattern="premium"')]
+        self.assertIn("Ask anything", grok)
+        self.assertIn("Auto", grok)
+        self.assertIn("Enter voice mode", grok)
+        self.assertIn("Focus Mode", grok)
+        self.assertIn("History", grok)
+        self.assertIn("Private", grok)
+        self.assertIn("Meet Grok Bot", grok)
+        self.assertIn("M21.002 5.611c0 2.689", grok)
+        self.assertIn("M3 5.5C3 4.12", grok)
+        self.assertIn("M12 4C9.25 4 6.83 5.39", grok)
+        self.assertIn("M14 4c-1.66 0-3 1.34-3 3v8", grok)
+        self.assertIn("M10 3.333c-6.667 0-3.27 5.601", grok)
+        premium = html[html.index('data-pattern="premium"') : html.index('data-pattern="articles"')]
+        self.assertIn("Verified since February 2026", premium)
+        self.assertIn("Quick access", premium)
+        self.assertIn("Upgrade", premium)
+        self.assertIn("Image 2.0 is here", premium)
+        self.assertIn("Go ad free", premium)
+        articles = html[html.index('data-pattern="articles"') :]
+        self.assertIn("Drafts", articles)
+        self.assertIn("Published", articles)
+        self.assertIn("This is where you write", articles)
+        self.assertIn("Write", articles)
+        empty = html[html.index('data-pattern="stats-empty"') :]
+        self.assertIn("assets/no-likes.png", empty)
+        landing = html[html.index('data-pattern="auth-landing-clone"') :]
+        self.assertIn("assets/twitter-banner.png", landing)
+        self.assertIn(".grok-demo", css)
+        self.assertIn(".grok-prompt", css)
+        self.assertIn(".voice-bars", css)
+        self.assertIn(".premium-demo", css)
+        self.assertIn(".premium-card", css)
+        self.assertIn(".premium-upgrade", css)
+        self.assertIn(".articles-demo", css)
+        self.assertIn(".article-draft", css)
+        self.assertIn(".articles-empty", css)
 
     # Responsive recipe — clone 62a9588 screens: xs 500, md 768, lg 1024, xl 1280.
 

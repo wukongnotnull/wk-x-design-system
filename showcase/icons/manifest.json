@@ -70,6 +70,12 @@
       "file": "ArticlesIcon.svg"
     },
     {
+      "id": "AutoIcon",
+      "source": "x.com logged-in extract 2026-09-16",
+      "variant": "custom",
+      "file": "AutoIcon.svg"
+    },
+    {
       "id": "Bars3BottomLeftIcon",
       "source": "heroicons@2.0.11",
       "variant": "outline",
@@ -226,6 +232,12 @@
       "file": "FeatherIcon.svg"
     },
     {
+      "id": "FocusModeIcon",
+      "source": "x.com logged-in extract 2026-09-16",
+      "variant": "custom",
+      "file": "FocusModeIcon.svg"
+    },
+    {
       "id": "GifIcon",
       "source": "heroicons@2.0.11",
       "variant": "outline",
@@ -242,6 +254,12 @@
       "source": "custom-icon.tsx@62a9588",
       "variant": "custom",
       "file": "GoogleIcon.svg"
+    },
+    {
+      "id": "GrokHistoryIcon",
+      "source": "x.com logged-in extract 2026-09-16",
+      "variant": "custom",
+      "file": "GrokHistoryIcon.svg"
     },
     {
       "id": "GrokIcon",
@@ -292,6 +310,12 @@
       "file": "MapPinIcon.svg"
     },
     {
+      "id": "MicIcon",
+      "source": "x.com logged-in extract 2026-09-16",
+      "variant": "custom",
+      "file": "MicIcon.svg"
+    },
+    {
       "id": "MoneyIcon",
       "source": "x.com logged-in extract 2026-09-16",
       "variant": "custom",
@@ -338,6 +362,12 @@
       "source": "x.com logged-in extract 2026-09-16",
       "variant": "custom",
       "file": "PremiumIcon.svg"
+    },
+    {
+      "id": "PrivateIcon",
+      "source": "x.com logged-in extract 2026-09-16",
+      "variant": "custom",
+      "file": "PrivateIcon.svg"
     },
     {
       "id": "QuestionMarkCircleIcon",
@@ -404,6 +434,12 @@
       "source": "heroicons@2.0.11",
       "variant": "outline",
       "file": "UserPlusIcon.svg"
+    },
+    {
+      "id": "ViewsIcon",
+      "source": "x.com logged-in extract 2026-09-16",
+      "variant": "custom",
+      "file": "ViewsIcon.svg"
     },
     {
       "id": "XLogoIcon",
