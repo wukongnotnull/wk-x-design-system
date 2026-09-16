@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
-"""Write distilled 62a9588 icons into showcase/icons/. One-shot snapshot, not a runtime fetch."""
+"""Maintainer-only, not part of the runtime contract.
+
+One-shot network fetch of distilled 62a9588 icons into showcase/icons/.
+"""
 
 from __future__ import annotations
 
