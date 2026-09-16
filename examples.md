@@ -39,7 +39,7 @@ For each task: grep `showcase/site.css` for the selector column. Markup is in `s
 | Float label | `#patterns` | `[data-pattern="float-label"]` | `.float-label-field`, `.float-label-count` |
 | Home composer | `#patterns` | `[data-pattern="home"]` `.home-main .composer` | `.home-main .composer` |
 | Aside search | `#patterns` | `[data-pattern="aside-search"]` | `.aside-search`, `.search-clear` |
-| Media grid 1 / 2 / 3 | `#patterns` | `[data-pattern="media-grid"]` | `.media-grid[data-count="1"]`, `.media-grid[data-count="2"]`, `.media-grid[data-count="3"]` |
+| Media grid 1 / 2 / 3 / 4 | `#patterns` | `[data-pattern="media-grid"]` | `.media-grid[data-count="1"]`, `.media-grid[data-count="2"]`, `.media-grid[data-count="3"]`, `.media-grid[data-count="4"]` |
 | Empty cover fallback | `#patterns` | `[data-pattern="profile-empty"]` | `.profile-cover.is-empty` |
 | Action confirm modal | `#patterns` | `[data-pattern="action-modal"]` | `.action-modal`, `.action-modal-panel`, `.action-modal-main` |
 | Loading | `#patterns` | `[data-pattern="loading"]` | `.status-loading` |
@@ -70,6 +70,21 @@ For each task: grep `showcase/site.css` for the selector column. Markup is in `s
 | Search filters | `#patterns` | `[data-pattern="search-filters"]` | `.filter-row`, `.filter-legend`, `.filter-row.is-on` |
 | Direct Messages | `#patterns` | `[data-pattern="messages"]` | `.messages-demo`, `.messages-list`, `.messages-pane`, `.messages-row` |
 | Poll composer | `#patterns` | `[data-pattern="poll"]` | `.poll-modal`, `.poll-choice`, `.poll-length`, `.poll-remove` |
+| See new posts | `#patterns` | `[data-pattern="new-posts"]` | `.new-posts` |
+| Search relevant | `#patterns` | `[data-pattern="search-relevant"]` | `.search-relevant`, `.search-relevant-actions` |
+| Communities page | `#patterns` | `[data-pattern="communities"]` | `.communities-demo`, `.community-card`, `.community-chip` |
+| More-menu destinations | `#patterns` | `[data-pattern="more-menu"]` | `.more-menu-demo` |
+| Display modal | `#patterns` | `[data-pattern="display-modal"]` | `.display-modal`, `.accent-radio`, `.theme-radio` |
+| Clone auth landing | `#patterns` | `[data-pattern="auth-landing-clone"]` | `.auth-landing-clone`, `.auth-clone-banner` |
+| Sidebar logout popover | `#patterns` | `[data-pattern="logout-popover"]` | `.logout-popover`, `.logout-caret` |
+| Clone More menu | `#patterns` | `[data-pattern="clone-more"]` | `.clone-more-demo` |
+| Tweet share popover | `#patterns` | `[data-pattern="tweet-share"]` | `.tweet-share-demo` |
+| Tweet overflow with icons | `#patterns` | `[data-pattern="tweet-overflow"]` | `.tweet-overflow-demo`, `.is-danger` |
+| Profile More + Message | `#patterns` | `[data-pattern="profile-actions"]` | `.profile-actions`, `.icon-only` |
+| People user-card | `#patterns` | `[data-pattern="user-card"]` | `.user-card`, `.user-card-top` |
+| Composer preview 4-up | `#patterns` | `[data-pattern="composer-preview"]` | `.composer-preview-demo`, `.media-remove` |
+| Status count text | `#patterns` | `[data-pattern="status-counts"]` | `.status-counts` |
+| Missing account | `#patterns` | `[data-pattern="account-missing"]` | `.account-missing` |
 | Hide catalog rail < 500px | layout | `#rail` | `@media (max-width: 499px)` |
 | Responsive: icon-only sidebar < 1280 (xl) | `#patterns` | `[data-pattern="sidebar"]`, `.nav-label`, `.nav-feather` | `@media (max-width: 1279px)`, `.sidebar-demo .nav-label`, `.sidebar-demo .nav-feather` |
 | Responsive: sidebar 96px at 768–1279 (md) | `#patterns` | `[data-pattern="sidebar"]` | `@media (min-width: 768px) and (max-width: 1279px)` |

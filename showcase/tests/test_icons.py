@@ -10,6 +10,7 @@ SKILL = ROOT.parent / "SKILL.md"
 
 # Distilled from ccrsxx/twitter-clone@62a9588 (HeroIcon + CustomIcon).
 REQUIRED = (
+    "AdsIcon",
     "AppleIcon",
     "ArchiveBoxXMarkIcon",
     "ArticlesIcon",
@@ -24,6 +25,7 @@ REQUIRED = (
     "BellIcon",
     "BookmarkIcon",
     "BookmarkSlashIcon",
+    "BusinessIcon",
     "CalendarDaysIcon",
     "CameraIcon",
     "ChartBarIcon",
@@ -36,6 +38,9 @@ REQUIRED = (
     "ChevronDownIcon",
     "ChevronRightIcon",
     "Cog8ToothIcon",
+    "CommunitiesIcon",
+    "ContentDisclosureIcon",
+    "CreatorStudioIcon",
     "EllipsisHorizontalCircleIcon",
     "EllipsisHorizontalIcon",
     "EnvelopeIcon",
@@ -62,6 +67,7 @@ REQUIRED = (
     "PollIcon",
     "PremiumIcon",
     "QuestionMarkCircleIcon",
+    "SpaceIcon",
     "SparklesIcon",
     "SpinnerIcon",
     "TrashIcon",

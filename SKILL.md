@@ -9,7 +9,7 @@ Apply the distilled X tokens and control recipes. Do not invent a "Twitter look.
 
 ## Provenance
 
-Snapshot distilled from https://github.com/ccrsxx/twitter-clone at commit `62a9588`: `globals.scss`, `tailwind.config.js`, the Heroicons 2.0.11 outline set the clone imports, and its tweet, input, sidebar, aside, user (profile / hover-card / nav / details), modal, and status components. The catalog holds 38 `data-pattern` demos plus the control row; [examples.md](examples.md) lists every one. Extra live glyphs (`XLogoIcon`, `GrokIcon`, `PremiumIcon`, and other rail extras) sit next to the pin set. Default logo stays `TwitterIcon` (bird).
+Snapshot distilled from https://github.com/ccrsxx/twitter-clone at commit `62a9588`: `globals.scss`, `tailwind.config.js`, the Heroicons 2.0.11 outline set the clone imports, and its tweet, input, sidebar, aside, user (profile / hover-card / nav / details), modal, and status components. The catalog holds 60 `data-pattern` demos plus the control row; [examples.md](examples.md) lists every one. Extra live glyphs (`XLogoIcon`, `GrokIcon`, `PremiumIcon`, and other rail extras) sit next to the pin set. Default logo stays `TwitterIcon` (bird).
 
 **Source of truth is [showcase/](showcase/)** next to this file — not live x.com, not `twitter-clone` main, not memory.
 

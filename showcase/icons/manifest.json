@@ -4,6 +4,12 @@
   "heroicons": "@heroicons/react@2.0.11",
   "icons": [
     {
+      "id": "AdsIcon",
+      "source": "x.com logged-in extract 2026-09-16",
+      "variant": "custom",
+      "file": "AdsIcon.svg"
+    },
+    {
       "id": "AppleIcon",
       "source": "custom-icon.tsx@62a9588",
       "variant": "custom",
@@ -88,6 +94,12 @@
       "file": "BookmarkSlashIcon.svg"
     },
     {
+      "id": "BusinessIcon",
+      "source": "x.com logged-in extract 2026-09-16",
+      "variant": "custom",
+      "file": "BusinessIcon.svg"
+    },
+    {
       "id": "CalendarDaysIcon",
       "source": "heroicons@2.0.11",
       "variant": "outline",
@@ -158,6 +170,24 @@
       "source": "heroicons@2.0.11",
       "variant": "outline",
       "file": "Cog8ToothIcon.svg"
+    },
+    {
+      "id": "CommunitiesIcon",
+      "source": "x.com logged-in extract 2026-09-16",
+      "variant": "custom",
+      "file": "CommunitiesIcon.svg"
+    },
+    {
+      "id": "ContentDisclosureIcon",
+      "source": "x.com logged-in extract 2026-09-16",
+      "variant": "custom",
+      "file": "ContentDisclosureIcon.svg"
+    },
+    {
+      "id": "CreatorStudioIcon",
+      "source": "x.com logged-in extract 2026-09-16",
+      "variant": "custom",
+      "file": "CreatorStudioIcon.svg"
     },
     {
       "id": "EllipsisHorizontalCircleIcon",
@@ -314,6 +344,12 @@
       "source": "heroicons@2.0.11",
       "variant": "outline",
       "file": "QuestionMarkCircleIcon.svg"
+    },
+    {
+      "id": "SpaceIcon",
+      "source": "x.com logged-in extract 2026-09-16",
+      "variant": "custom",
+      "file": "SpaceIcon.svg"
     },
     {
       "id": "SparklesIcon",

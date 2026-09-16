@@ -132,6 +132,21 @@ class HtmlChromeTest(unittest.TestCase):
             "search-filters",
             "messages",
             "poll",
+            "new-posts",
+            "search-relevant",
+            "communities",
+            "more-menu",
+            "display-modal",
+            "auth-landing-clone",
+            "logout-popover",
+            "clone-more",
+            "tweet-share",
+            "tweet-overflow",
+            "profile-actions",
+            "user-card",
+            "composer-preview",
+            "status-counts",
+            "account-missing",
         ):
             self.assertIn(f'data-pattern="{pattern}"', html)
         self.assertIn("Pinned Tweet", html)
@@ -930,6 +945,44 @@ class HtmlChromeTest(unittest.TestCase):
                 raise AssertionError(f"unterminated block for {query}")
             start = css.find(query, i + 1)
         return "\n".join(blocks)
+
+    def test_leftover_fill(self):
+        html = (ROOT / "index.html").read_text(encoding="utf-8")
+        css = (ROOT / "site.css").read_text(encoding="utf-8")
+        self.assertIn("See new posts", html)
+        self.assertIn("Is this post relevant", html)
+        self.assertIn("Search Communities", html)
+        self.assertIn("Discover new Communities", html)
+        self.assertIn("Create your Space", html)
+        self.assertIn("Generate image", html)
+        self.assertIn("Content disclosure", html)
+        self.assertIn("Creator Studio", html)
+        self.assertIn("Customize your view", html)
+        self.assertIn("Join Twitter today.", html)
+        self.assertIn("Log out @alice", html)
+        self.assertIn("Help center", html)
+        self.assertIn("Copy link to Tweet", html)
+        self.assertIn("Remove Tweet from Bookmarks", html)
+        self.assertIn("Follow @bob", html)
+        self.assertIn('aria-label="Message"', html)
+        self.assertIn("Follows you", html)
+        self.assertIn("This account doesn’t exist", html)
+        self.assertIn("Replies", html[html.index('data-pattern="status-counts"'):])
+        self.assertIn("M3 2h18.61l-3.5 7 3.5 7H5v6H3V2zm2 12h13.38l-2.5-5 2.5-5H5v10z", html)
+        self.assertIn("M10.059 2.593c1.175-.784", html)
+        self.assertIn("M7.501 19.917L7.471 21H.472", html)
+        self.assertIn("M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z", html)
+        self.assertIn(".new-posts", css)
+        self.assertIn(".search-relevant", css)
+        self.assertIn(".communities-demo", css)
+        self.assertIn(".display-modal", css)
+        self.assertIn(".auth-landing-clone", css)
+        self.assertIn(".logout-popover", css)
+        self.assertIn(".media-remove", css)
+        self.assertIn(".status-counts", css)
+        self.assertIn(".account-missing", css)
+        self.assertIn(".stats-empty-art", css)
+        self.assertIn("M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z", html)
 
     def test_sidebar_icon_only_below_xl(self):
         sidebar = HTML[HTML.index('data-pattern="sidebar"') : HTML.index('class="home-main"')]
