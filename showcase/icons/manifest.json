@@ -4,6 +4,12 @@
   "heroicons": "@heroicons/react@2.0.11",
   "icons": [
     {
+      "id": "AdsIcon",
+      "source": "x.com logged-in extract 2026-09-16",
+      "variant": "custom",
+      "file": "AdsIcon.svg"
+    },
+    {
       "id": "AppleIcon",
       "source": "custom-icon.tsx@62a9588",
       "variant": "custom",
@@ -58,6 +64,18 @@
       "file": "ArrowUpTrayIcon.svg"
     },
     {
+      "id": "ArticlesIcon",
+      "source": "x.com logged-in extract 2026-09-16",
+      "variant": "custom",
+      "file": "ArticlesIcon.svg"
+    },
+    {
+      "id": "AutoIcon",
+      "source": "x.com logged-in extract 2026-09-16",
+      "variant": "custom",
+      "file": "AutoIcon.svg"
+    },
+    {
       "id": "Bars3BottomLeftIcon",
       "source": "heroicons@2.0.11",
       "variant": "outline",
@@ -80,6 +98,12 @@
       "source": "heroicons@2.0.11",
       "variant": "outline",
       "file": "BookmarkSlashIcon.svg"
+    },
+    {
+      "id": "BusinessIcon",
+      "source": "x.com logged-in extract 2026-09-16",
+      "variant": "custom",
+      "file": "BusinessIcon.svg"
     },
     {
       "id": "CalendarDaysIcon",
@@ -118,6 +142,12 @@
       "file": "ChatBubbleOvalLeftIcon.svg"
     },
     {
+      "id": "ChatIcon",
+      "source": "x.com logged-in extract 2026-09-16",
+      "variant": "custom",
+      "file": "ChatIcon.svg"
+    },
+    {
       "id": "CheckBadgeIcon",
       "source": "heroicons@2.0.11",
       "variant": "solid",
@@ -146,6 +176,24 @@
       "source": "heroicons@2.0.11",
       "variant": "outline",
       "file": "Cog8ToothIcon.svg"
+    },
+    {
+      "id": "CommunitiesIcon",
+      "source": "x.com logged-in extract 2026-09-16",
+      "variant": "custom",
+      "file": "CommunitiesIcon.svg"
+    },
+    {
+      "id": "ContentDisclosureIcon",
+      "source": "x.com logged-in extract 2026-09-16",
+      "variant": "custom",
+      "file": "ContentDisclosureIcon.svg"
+    },
+    {
+      "id": "CreatorStudioIcon",
+      "source": "x.com logged-in extract 2026-09-16",
+      "variant": "custom",
+      "file": "CreatorStudioIcon.svg"
     },
     {
       "id": "EllipsisHorizontalCircleIcon",
@@ -184,6 +232,12 @@
       "file": "FeatherIcon.svg"
     },
     {
+      "id": "FocusModeIcon",
+      "source": "x.com logged-in extract 2026-09-16",
+      "variant": "custom",
+      "file": "FocusModeIcon.svg"
+    },
+    {
       "id": "GifIcon",
       "source": "heroicons@2.0.11",
       "variant": "outline",
@@ -202,6 +256,18 @@
       "file": "GoogleIcon.svg"
     },
     {
+      "id": "GrokHistoryIcon",
+      "source": "x.com logged-in extract 2026-09-16",
+      "variant": "custom",
+      "file": "GrokHistoryIcon.svg"
+    },
+    {
+      "id": "GrokIcon",
+      "source": "x.com logged-in extract 2026-09-16",
+      "variant": "custom",
+      "file": "GrokIcon.svg"
+    },
+    {
       "id": "HashtagIcon",
       "source": "heroicons@2.0.11",
       "variant": "outline",
@@ -212,6 +278,12 @@
       "source": "heroicons@2.0.11",
       "variant": "outline",
       "file": "HeartIcon.svg"
+    },
+    {
+      "id": "HistoryIcon",
+      "source": "x.com logged-in extract 2026-09-16",
+      "variant": "custom",
+      "file": "HistoryIcon.svg"
     },
     {
       "id": "HomeIcon",
@@ -236,6 +308,18 @@
       "source": "heroicons@2.0.11",
       "variant": "outline",
       "file": "MapPinIcon.svg"
+    },
+    {
+      "id": "MicIcon",
+      "source": "x.com logged-in extract 2026-09-16",
+      "variant": "custom",
+      "file": "MicIcon.svg"
+    },
+    {
+      "id": "MoneyIcon",
+      "source": "x.com logged-in extract 2026-09-16",
+      "variant": "custom",
+      "file": "MoneyIcon.svg"
     },
     {
       "id": "PaintBrushIcon",
@@ -268,10 +352,34 @@
       "file": "PlusIcon.svg"
     },
     {
+      "id": "PollIcon",
+      "source": "x.com logged-in extract 2026-09-16",
+      "variant": "custom",
+      "file": "PollIcon.svg"
+    },
+    {
+      "id": "PremiumIcon",
+      "source": "x.com logged-in extract 2026-09-16",
+      "variant": "custom",
+      "file": "PremiumIcon.svg"
+    },
+    {
+      "id": "PrivateIcon",
+      "source": "x.com logged-in extract 2026-09-16",
+      "variant": "custom",
+      "file": "PrivateIcon.svg"
+    },
+    {
       "id": "QuestionMarkCircleIcon",
       "source": "heroicons@2.0.11",
       "variant": "outline",
       "file": "QuestionMarkCircleIcon.svg"
+    },
+    {
+      "id": "SpaceIcon",
+      "source": "x.com logged-in extract 2026-09-16",
+      "variant": "custom",
+      "file": "SpaceIcon.svg"
     },
     {
       "id": "SparklesIcon",
@@ -326,6 +434,18 @@
       "source": "heroicons@2.0.11",
       "variant": "outline",
       "file": "UserPlusIcon.svg"
+    },
+    {
+      "id": "ViewsIcon",
+      "source": "x.com logged-in extract 2026-09-16",
+      "variant": "custom",
+      "file": "ViewsIcon.svg"
+    },
+    {
+      "id": "XLogoIcon",
+      "source": "x.com logged-in extract 2026-09-16",
+      "variant": "custom",
+      "file": "XLogoIcon.svg"
     },
     {
       "id": "XMarkIcon",

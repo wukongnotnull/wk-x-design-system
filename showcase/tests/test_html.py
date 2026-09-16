@@ -114,6 +114,42 @@ class HtmlChromeTest(unittest.TestCase):
             "mobile-sidebar",
             "reply-modal",
             "stats-modal",
+            "auth-landing",
+            "login-modal",
+            "signup-aside",
+            "profile-mention",
+            "page-header",
+            "quote-embed",
+            "video-media",
+            "tweet-metrics",
+            "post-detail",
+            "account-switcher",
+            "topic-tabs",
+            "news-aside",
+            "explore",
+            "notifications",
+            "search-results",
+            "search-filters",
+            "messages",
+            "poll",
+            "new-posts",
+            "search-relevant",
+            "communities",
+            "more-menu",
+            "display-modal",
+            "auth-landing-clone",
+            "logout-popover",
+            "clone-more",
+            "tweet-share",
+            "tweet-overflow",
+            "profile-actions",
+            "user-card",
+            "composer-preview",
+            "status-counts",
+            "account-missing",
+            "grok",
+            "premium",
+            "articles",
         ):
             self.assertIn(f'data-pattern="{pattern}"', html)
         self.assertIn("Pinned Tweet", html)
@@ -716,6 +752,221 @@ class HtmlChromeTest(unittest.TestCase):
         self.assertIn(".stats-modal", css)
         self.assertIn(".stats-modal-header", css)
 
+    def test_auth_landing_and_login_modal(self):
+        html = (ROOT / "index.html").read_text(encoding="utf-8")
+        css = (ROOT / "site.css").read_text(encoding="utf-8")
+        landing = html[html.index('data-pattern="auth-landing"') :]
+        self.assertIn("Happening now.", landing)
+        self.assertIn("Continue with phone", landing)
+        self.assertIn("Continue with Google", landing)
+        self.assertIn("Continue with Apple", landing)
+        self.assertIn("Email or username", landing)
+        self.assertIn("btn-social", landing)
+        self.assertIn("auth-field", landing)
+        self.assertIn("btn-continue", landing)
+        self.assertIn("auth-or", landing)
+        self.assertIn("M24 9.5c3.54 0 6.71 1.22", landing)
+        self.assertIn("M16.365 1.43c0 1.14", landing)
+        modal = html[html.index('data-pattern="login-modal"') : html.index('data-pattern="signup-aside"')]
+        self.assertIn("See what's happening", modal)
+        self.assertIn("login-modal-backdrop", modal)
+        self.assertIn("login-modal-panel", modal)
+        self.assertIn('aria-label="Back"', modal)
+        self.assertIn("M24 9.5c3.54 0 6.71 1.22", modal)
+        self.assertIn("M16.365 1.43c0 1.14", modal)
+        aside = html[html.index('data-pattern="signup-aside"') :]
+        self.assertIn("Log in or sign up for X", aside)
+        self.assertIn("Log in with username or email", aside)
+        self.assertIn("M24 9.5c3.54 0 6.71 1.22", aside)
+        self.assertIn("M15.75 6a3.75 3.75 0 11-7.5 0", aside)
+        self.assertIn(".auth-landing", css)
+        self.assertIn(".btn-social", css)
+        self.assertIn(".auth-field", css)
+        self.assertIn(".btn-continue", css)
+        self.assertIn(".auth-or", css)
+        self.assertIn(".login-modal", css)
+        self.assertIn(".login-modal-panel", css)
+        self.assertIn(".login-modal-backdrop", css)
+        self.assertIn("box-shadow: 0 0 0 2px rgb(var(--main-accent))", css)
+
+    def test_profile_mention_and_page_header(self):
+        html = (ROOT / "index.html").read_text(encoding="utf-8")
+        css = (ROOT / "site.css").read_text(encoding="utf-8")
+        mention = html[html.index('data-pattern="profile-mention"') :]
+        self.assertIn("Mention", mention)
+        self.assertIn("btn-outline", mention)
+        self.assertIn("btn-follow", mention)
+        header = html[html.index('data-pattern="page-header"') :]
+        self.assertIn("15.7K posts", header)
+        self.assertIn("is-gold", header)
+        self.assertIn('aria-label="Refresh"', header)
+        self.assertIn('aria-label="Search"', header)
+        self.assertIn(".btn-outline", css)
+        self.assertIn(".page-header", css)
+        self.assertIn(".tweet-verified.is-gold", css)
+        self.assertIn("fill: rgb(var(--accent-yellow))", css)
+
+    def test_quote_video_metrics_and_status(self):
+        html = (ROOT / "index.html").read_text(encoding="utf-8")
+        css = (ROOT / "site.css").read_text(encoding="utf-8")
+        quote = html[html.index('data-pattern="quote-embed"') :]
+        self.assertIn("quote-embed", quote)
+        self.assertIn("Grok Bot", quote)
+        self.assertIn("good bot", quote)
+        video = html[html.index('data-pattern="video-media"') :]
+        self.assertIn("video-play", video)
+        self.assertIn("video-duration", video)
+        self.assertIn("08:44:53", video)
+        self.assertIn("M12.538 6.478", video)
+        metrics = html[html.index('data-pattern="tweet-metrics"') :]
+        self.assertIn('class="views"', metrics)
+        self.assertIn('class="bookmark"', metrics)
+        self.assertIn("699K", metrics)
+        self.assertIn("M8.75 21V3h2v18h-2z", metrics)
+        self.assertIn("M17.593 3.322", metrics)
+        self.assertIn('class="status-detail" data-pattern="post-detail"', html)
+        detail = html[html.index('data-pattern="post-detail"') :]
+        self.assertIn("is-status", detail)
+        self.assertIn("status-time", detail)
+        self.assertIn("Tweet your reply", detail)
+        self.assertIn(".quote-embed", css)
+        self.assertIn(".video-media", css)
+        self.assertIn(".video-play", css)
+        self.assertIn(".video-duration", css)
+        self.assertIn(".tweet-actions.is-wide", css)
+        self.assertIn(".tweet-actions .views", css)
+        self.assertIn(".tweet-actions .bookmark", css)
+        self.assertIn(".status-detail", css)
+        self.assertIn(".tweet-card.is-status", css)
+        self.assertIn(".status-time", css)
+
+    def test_logged_in_chrome(self):
+        html = (ROOT / "index.html").read_text(encoding="utf-8")
+        css = (ROOT / "site.css").read_text(encoding="utf-8")
+        switcher = html[html.index('data-pattern="account-switcher"') : html.index('data-pattern="topic-tabs"')]
+        self.assertIn("account-switcher-meta", switcher)
+        self.assertIn("@alice", switcher)
+        self.assertIn("M6.75 12a.75.75 0 11-1.5 0", switcher)
+        topics = html[html.index('data-pattern="topic-tabs"') : html.index('data-pattern="news-aside"')]
+        self.assertIn("For you", topics)
+        self.assertIn("Following", topics)
+        self.assertIn("Design", topics)
+        self.assertIn("M12 4.5v15m7.5-7.5h-15", topics)
+        self.assertIn("M19.5 8.25l-7.5 7.5-7.5-7.5", topics)
+        news = html[html.index('data-pattern="news-aside"') : html.index('data-pattern="explore"')]
+        self.assertIn("Today's News", news)
+        self.assertIn("news-row", news)
+        self.assertIn("Trending now · News", news)
+        explore = html[html.index('data-pattern="explore"') : html.index('data-pattern="notifications"')]
+        self.assertIn("Trending", explore)
+        self.assertIn("Sports", explore)
+        self.assertIn("Entertainment", explore)
+        self.assertIn('aria-label="Settings"', explore)
+        self.assertIn("M10.343 3.94", explore)
+        notices = html[html.index('data-pattern="notifications"') : html.index('data-pattern="search-results"')]
+        self.assertIn("All", notices)
+        self.assertIn("Mentions", notices)
+        self.assertIn("followed you", notices)
+        self.assertIn("New post notifications", notices)
+        self.assertIn("M19 7.5v3m0 0v3m0-3h3", notices)
+        results = html[html.index('data-pattern="search-results"') : html.index('data-pattern="search-filters"')]
+        self.assertIn('value="design"', results)
+        self.assertIn("Top", results)
+        self.assertIn("Latest", results)
+        self.assertIn("People", results)
+        self.assertIn("Media", results)
+        self.assertIn("Lists", results)
+        filters = html[html.index('data-pattern="search-filters"') :]
+        self.assertIn("Search filters", filters)
+        self.assertIn("From anyone", filters)
+        self.assertIn("People you follow", filters)
+        self.assertIn("Anywhere", filters)
+        self.assertIn("Near you", filters)
+        self.assertIn("M4.5 12.75l6 6 9-13.5", filters)
+        self.assertIn(".tabs.is-scroll", css)
+        self.assertIn(".tabs.is-five", css)
+        self.assertIn(".topic-add", css)
+        self.assertIn(".account-switcher", css)
+        self.assertIn(".news-row", css)
+        self.assertIn(".news-headline", css)
+        self.assertIn(".explore-demo", css)
+        self.assertIn(".notice-row", css)
+        self.assertIn(".notice-mark", css)
+        self.assertIn(".filter-row", css)
+        self.assertIn(".filter-row.is-on", css)
+        self.assertIn("color: rgb(var(--main-accent))", css)
+
+    def test_messages_and_poll_chrome(self):
+        html = (ROOT / "index.html").read_text(encoding="utf-8")
+        css = (ROOT / "site.css").read_text(encoding="utf-8")
+        inbox = html[html.index('data-pattern="messages"') : html.index('data-pattern="poll"')]
+        self.assertIn("Chat", inbox)
+        self.assertIn("Start a conversation", inbox)
+        self.assertIn("New chat", inbox)
+        self.assertIn("Search messages", inbox)
+        self.assertIn("M20.7 11.7c0-4.48", inbox)
+        poll = html[html.index('data-pattern="poll"') :]
+        self.assertIn("Ask a question", poll)
+        self.assertIn("Choice 1", poll)
+        self.assertIn("Choice 2", poll)
+        self.assertIn("Poll length", poll)
+        self.assertIn("Remove poll", poll)
+        self.assertIn("Everyone can reply", poll)
+        self.assertIn("M6 5c-1.1 0-2 .895-2 2s.9 2 2 2", poll)
+        self.assertIn("Grok", html)
+        self.assertIn("Premium", html)
+        self.assertIn('data-icon="XLogoIcon"', html)
+        self.assertIn("M21.742 21.75l-7.563-11.179", html)
+        self.assertIn("M23.643 4.937c-.835.37", html)
+        self.assertIn(".messages-demo", css)
+        self.assertIn(".messages-pane", css)
+        self.assertIn(".poll-modal", css)
+        self.assertIn(".poll-choice", css)
+        self.assertIn(".poll-remove", css)
+        self.assertIn("color: rgb(var(--accent-red))", css)
+
+
+    def test_shell_fill(self):
+        html = (ROOT / "index.html").read_text(encoding="utf-8")
+        css = (ROOT / "site.css").read_text(encoding="utf-8")
+        grok = html[html.index('data-pattern="grok"') : html.index('data-pattern="premium"')]
+        self.assertIn("Ask anything", grok)
+        self.assertIn("Auto", grok)
+        self.assertIn("Enter voice mode", grok)
+        self.assertIn("Focus Mode", grok)
+        self.assertIn("History", grok)
+        self.assertIn("Private", grok)
+        self.assertIn("Meet Grok Bot", grok)
+        self.assertIn("M21.002 5.611c0 2.689", grok)
+        self.assertIn("M3 5.5C3 4.12", grok)
+        self.assertIn("M12 4C9.25 4 6.83 5.39", grok)
+        self.assertIn("M14 4c-1.66 0-3 1.34-3 3v8", grok)
+        self.assertIn("M10 3.333c-6.667 0-3.27 5.601", grok)
+        premium = html[html.index('data-pattern="premium"') : html.index('data-pattern="articles"')]
+        self.assertIn("Verified since February 2026", premium)
+        self.assertIn("Quick access", premium)
+        self.assertIn("Upgrade", premium)
+        self.assertIn("Image 2.0 is here", premium)
+        self.assertIn("Go ad free", premium)
+        articles = html[html.index('data-pattern="articles"') :]
+        self.assertIn("Drafts", articles)
+        self.assertIn("Published", articles)
+        self.assertIn("This is where you write", articles)
+        self.assertIn("Write", articles)
+        empty = html[html.index('data-pattern="stats-empty"') :]
+        self.assertIn("assets/no-likes.png", empty)
+        landing = html[html.index('data-pattern="auth-landing-clone"') :]
+        self.assertIn("assets/twitter-banner.png", landing)
+        self.assertIn(".grok-demo", css)
+        self.assertIn(".grok-prompt", css)
+        self.assertIn(".voice-bars", css)
+        self.assertIn(".premium-demo", css)
+        self.assertIn(".premium-card", css)
+        self.assertIn(".premium-upgrade", css)
+        self.assertIn(".articles-demo", css)
+        self.assertIn(".article-draft", css)
+        self.assertIn(".articles-empty", css)
+
     # Responsive recipe — clone 62a9588 screens: xs 500, md 768, lg 1024, xl 1280.
 
     @staticmethod
@@ -739,6 +990,44 @@ class HtmlChromeTest(unittest.TestCase):
                 raise AssertionError(f"unterminated block for {query}")
             start = css.find(query, i + 1)
         return "\n".join(blocks)
+
+    def test_leftover_fill(self):
+        html = (ROOT / "index.html").read_text(encoding="utf-8")
+        css = (ROOT / "site.css").read_text(encoding="utf-8")
+        self.assertIn("See new posts", html)
+        self.assertIn("Is this post relevant", html)
+        self.assertIn("Search Communities", html)
+        self.assertIn("Discover new Communities", html)
+        self.assertIn("Create your Space", html)
+        self.assertIn("Generate image", html)
+        self.assertIn("Content disclosure", html)
+        self.assertIn("Creator Studio", html)
+        self.assertIn("Customize your view", html)
+        self.assertIn("Join Twitter today.", html)
+        self.assertIn("Log out @alice", html)
+        self.assertIn("Help center", html)
+        self.assertIn("Copy link to Tweet", html)
+        self.assertIn("Remove Tweet from Bookmarks", html)
+        self.assertIn("Follow @bob", html)
+        self.assertIn('aria-label="Message"', html)
+        self.assertIn("Follows you", html)
+        self.assertIn("This account doesn’t exist", html)
+        self.assertIn("Replies", html[html.index('data-pattern="status-counts"'):])
+        self.assertIn("M3 2h18.61l-3.5 7 3.5 7H5v6H3V2zm2 12h13.38l-2.5-5 2.5-5H5v10z", html)
+        self.assertIn("M10.059 2.593c1.175-.784", html)
+        self.assertIn("M7.501 19.917L7.471 21H.472", html)
+        self.assertIn("M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z", html)
+        self.assertIn(".new-posts", css)
+        self.assertIn(".search-relevant", css)
+        self.assertIn(".communities-demo", css)
+        self.assertIn(".display-modal", css)
+        self.assertIn(".auth-landing-clone", css)
+        self.assertIn(".logout-popover", css)
+        self.assertIn(".media-remove", css)
+        self.assertIn(".status-counts", css)
+        self.assertIn(".account-missing", css)
+        self.assertIn(".stats-empty-art", css)
+        self.assertIn("M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z", html)
 
     def test_sidebar_icon_only_below_xl(self):
         sidebar = HTML[HTML.index('data-pattern="sidebar"') : HTML.index('class="home-main"')]
