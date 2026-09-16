@@ -61,6 +61,13 @@ For each task: grep `showcase/site.css` for the selector column. Markup is in `s
 | Video media | `#patterns` | `[data-pattern="video-media"]` | `.video-media`, `.video-play`, `.video-duration` |
 | Views + bookmark | `#patterns` | `[data-pattern="tweet-metrics"]` | `.tweet-actions.is-wide`, `.tweet-actions .views`, `.tweet-actions .bookmark` |
 | Post detail | `#patterns` | `[data-pattern="post-detail"]` | `.status-detail`, `.tweet-card.is-status`, `.status-time` |
+| Account switcher | `#patterns` | `[data-pattern="account-switcher"]` | `.account-switcher`, `.account-switcher-meta` |
+| Topic tabs | `#patterns` | `[data-pattern="topic-tabs"]` | `.tabs.is-scroll`, `.topic-add` |
+| Today's News | `#patterns` | `[data-pattern="news-aside"]` | `.news-row`, `.news-headline` |
+| Explore | `#patterns` | `[data-pattern="explore"]` | `.explore-demo`, `.tabs.is-five` |
+| Notifications | `#patterns` | `[data-pattern="notifications"]` | `.notifications-demo`, `.notice-row`, `.notice-mark` |
+| Search results | `#patterns` | `[data-pattern="search-results"]` | `.search-results-demo` |
+| Search filters | `#patterns` | `[data-pattern="search-filters"]` | `.filter-row`, `.filter-legend`, `.filter-row.is-on` |
 | Hide catalog rail < 500px | layout | `#rail` | `@media (max-width: 499px)` |
 | Responsive: icon-only sidebar < 1280 (xl) | `#patterns` | `[data-pattern="sidebar"]`, `.nav-label`, `.nav-feather` | `@media (max-width: 1279px)`, `.sidebar-demo .nav-label`, `.sidebar-demo .nav-feather` |
 | Responsive: sidebar 96px at 768–1279 (md) | `#patterns` | `[data-pattern="sidebar"]` | `@media (min-width: 768px) and (max-width: 1279px)` |

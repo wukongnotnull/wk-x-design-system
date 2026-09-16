@@ -123,6 +123,13 @@ class HtmlChromeTest(unittest.TestCase):
             "video-media",
             "tweet-metrics",
             "post-detail",
+            "account-switcher",
+            "topic-tabs",
+            "news-aside",
+            "explore",
+            "notifications",
+            "search-results",
+            "search-filters",
         ):
             self.assertIn(f'data-pattern="{pattern}"', html)
         self.assertIn("Pinned Tweet", html)
@@ -812,6 +819,62 @@ class HtmlChromeTest(unittest.TestCase):
         self.assertIn(".status-detail", css)
         self.assertIn(".tweet-card.is-status", css)
         self.assertIn(".status-time", css)
+
+    def test_logged_in_chrome(self):
+        html = (ROOT / "index.html").read_text(encoding="utf-8")
+        css = (ROOT / "site.css").read_text(encoding="utf-8")
+        switcher = html[html.index('data-pattern="account-switcher"') : html.index('data-pattern="topic-tabs"')]
+        self.assertIn("account-switcher-meta", switcher)
+        self.assertIn("@alice", switcher)
+        self.assertIn("M6.75 12a.75.75 0 11-1.5 0", switcher)
+        topics = html[html.index('data-pattern="topic-tabs"') : html.index('data-pattern="news-aside"')]
+        self.assertIn("For you", topics)
+        self.assertIn("Following", topics)
+        self.assertIn("Design", topics)
+        self.assertIn("M12 4.5v15m7.5-7.5h-15", topics)
+        self.assertIn("M19.5 8.25l-7.5 7.5-7.5-7.5", topics)
+        news = html[html.index('data-pattern="news-aside"') : html.index('data-pattern="explore"')]
+        self.assertIn("Today's News", news)
+        self.assertIn("news-row", news)
+        self.assertIn("Trending now · News", news)
+        explore = html[html.index('data-pattern="explore"') : html.index('data-pattern="notifications"')]
+        self.assertIn("Trending", explore)
+        self.assertIn("Sports", explore)
+        self.assertIn("Entertainment", explore)
+        self.assertIn('aria-label="Settings"', explore)
+        self.assertIn("M10.343 3.94", explore)
+        notices = html[html.index('data-pattern="notifications"') : html.index('data-pattern="search-results"')]
+        self.assertIn("All", notices)
+        self.assertIn("Mentions", notices)
+        self.assertIn("followed you", notices)
+        self.assertIn("New post notifications", notices)
+        self.assertIn("M19 7.5v3m0 0v3m0-3h3", notices)
+        results = html[html.index('data-pattern="search-results"') : html.index('data-pattern="search-filters"')]
+        self.assertIn('value="design"', results)
+        self.assertIn("Top", results)
+        self.assertIn("Latest", results)
+        self.assertIn("People", results)
+        self.assertIn("Media", results)
+        self.assertIn("Lists", results)
+        filters = html[html.index('data-pattern="search-filters"') :]
+        self.assertIn("Search filters", filters)
+        self.assertIn("From anyone", filters)
+        self.assertIn("People you follow", filters)
+        self.assertIn("Anywhere", filters)
+        self.assertIn("Near you", filters)
+        self.assertIn("M4.5 12.75l6 6 9-13.5", filters)
+        self.assertIn(".tabs.is-scroll", css)
+        self.assertIn(".tabs.is-five", css)
+        self.assertIn(".topic-add", css)
+        self.assertIn(".account-switcher", css)
+        self.assertIn(".news-row", css)
+        self.assertIn(".news-headline", css)
+        self.assertIn(".explore-demo", css)
+        self.assertIn(".notice-row", css)
+        self.assertIn(".notice-mark", css)
+        self.assertIn(".filter-row", css)
+        self.assertIn(".filter-row.is-on", css)
+        self.assertIn("color: rgb(var(--main-accent))", css)
 
     # Responsive recipe — clone 62a9588 screens: xs 500, md 768, lg 1024, xl 1280.
 

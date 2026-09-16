@@ -1043,6 +1043,127 @@
               <p class="composer-placeholder">Tweet your reply</p>
             </div>
           </div>
+          <button type="button" class="account-switcher" data-pattern="account-switcher">
+            <div class="avatar" aria-hidden="true"></div>
+            <span class="account-switcher-meta">
+              <span class="tweet-name">Alice</span>
+              <span class="suggest-handle">@alice</span>
+            </span>
+            <i data-icon="EllipsisHorizontalIcon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM12.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM18.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0z"/></svg>
+            </i>
+          </button>
+          <div class="tabs is-scroll" data-pattern="topic-tabs">
+            <button type="button" aria-selected="true">For you <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg></button>
+            <button type="button">Following</button>
+            <button type="button">Design</button>
+            <button type="button">Tech</button>
+            <button type="button" class="topic-add" aria-label="Add topic" data-icon="PlusIcon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"/></svg>
+            </button>
+          </div>
+          <section class="aside-card" data-pattern="news-aside">
+            <h3 class="aside-title">Today's News</h3>
+            <a class="news-row" href="#patterns">
+              <div class="avatar" aria-hidden="true"></div>
+              <span>
+                <p class="news-headline">SpaceXAI engineers build a company in three days</p>
+                <p class="trend-meta">Trending now · News · 172 posts</p>
+              </span>
+            </a>
+            <a class="news-row" href="#patterns">
+              <div class="avatar" aria-hidden="true"></div>
+              <span>
+                <p class="news-headline">Design tokens stay on the clone pin</p>
+                <p class="trend-meta">Trending now · News · 84 posts</p>
+              </span>
+            </a>
+          </section>
+          <div class="explore-demo" data-pattern="explore">
+            <div class="page-header">
+              <form class="search" action="#" onsubmit="return false">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"/></svg>
+                <input type="search" placeholder="Search Twitter" aria-label="Search Twitter">
+              </form>
+              <button type="button" class="icon-button" aria-label="Settings" data-icon="Cog8ToothIcon">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M10.343 3.94c.09-.542.56-.94 1.11-.94h1.093c.55 0 1.02.398 1.11.94l.149.894c.07.424.384.764.78.93.398.164.855.142 1.205-.108l.737-.527a1.125 1.125 0 011.45.12l.773.774c.39.389.44 1.002.12 1.45l-.527.737c-.25.35-.272.806-.107 1.204.165.397.505.71.93.78l.893.15c.543.09.94.56.94 1.109v1.094c0 .55-.397 1.02-.94 1.11l-.893.149c-.425.07-.765.383-.93.78-.165.398-.143.854.107 1.204l.527.738c.32.447.269 1.06-.12 1.45l-.774.773a1.125 1.125 0 01-1.449.12l-.738-.527c-.35-.25-.806-.272-1.203-.107-.397.165-.71.505-.781.929l-.149.894c-.09.542-.56.94-1.11.94h-1.094c-.55 0-1.019-.398-1.11-.94l-.148-.894c-.071-.424-.384-.764-.781-.93-.398-.164-.854-.142-1.204.108l-.738.527c-.447.32-1.06.269-1.45-.12l-.773-.774a1.125 1.125 0 01-.12-1.45l.527-.737c.25-.35.273-.806.108-1.204-.165-.397-.505-.71-.93-.78l-.894-.15c-.542-.09-.94-.56-.94-1.109v-1.094c0-.55.398-1.02.94-1.11l.894-.149c.424-.07.765-.383.93-.78.165-.398.143-.854-.107-1.204l-.527-.738a1.125 1.125 0 01.12-1.45l.773-.773a1.125 1.125 0 011.45-.12l.737.527c.35.25.807.272 1.204.107.397-.165.71-.505.78-.929l.15-.894z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              </button>
+            </div>
+            <div class="tabs is-five">
+              <button type="button" aria-selected="true">Explore</button>
+              <button type="button">Trending</button>
+              <button type="button">News</button>
+              <button type="button">Sports</button>
+              <button type="button">Entertainment</button>
+            </div>
+            <a class="news-row" href="#patterns">
+              <div class="avatar" aria-hidden="true"></div>
+              <span>
+                <p class="news-headline">Today's News on Explore</p>
+                <p class="trend-meta">Trending now · News · 320 posts</p>
+              </span>
+            </a>
+            <a class="trend-row" href="#patterns">
+              <p class="trend-meta">Technology · Trending</p>
+              <p class="trend-name">iOS 27</p>
+            </a>
+          </div>
+          <div class="notifications-demo" data-pattern="notifications">
+            <div class="page-header">
+              <div class="page-header-main">
+                <h3 class="type-display">Notifications</h3>
+              </div>
+              <button type="button" class="icon-button" aria-label="Settings" data-icon="Cog8ToothIcon">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M10.343 3.94c.09-.542.56-.94 1.11-.94h1.093c.55 0 1.02.398 1.11.94l.149.894c.07.424.384.764.78.93.398.164.855.142 1.205-.108l.737-.527a1.125 1.125 0 011.45.12l.773.774c.39.389.44 1.002.12 1.45l-.527.737c-.25.35-.272.806-.107 1.204.165.397.505.71.93.78l.893.15c.543.09.94.56.94 1.109v1.094c0 .55-.397 1.02-.94 1.11l-.893.149c-.425.07-.765.383-.93.78-.165.398-.143.854.107 1.204l.527.738c.32.447.269 1.06-.12 1.45l-.774.773a1.125 1.125 0 01-1.449.12l-.738-.527c-.35-.25-.806-.272-1.203-.107-.397.165-.71.505-.781.929l-.149.894c-.09.542-.56.94-1.11.94h-1.094c-.55 0-1.019-.398-1.11-.94l-.148-.894c-.071-.424-.384-.764-.781-.93-.398-.164-.854-.142-1.204.108l-.738.527c-.447.32-1.06.269-1.45-.12l-.773-.774a1.125 1.125 0 01-.12-1.45l.527-.737c.25-.35.273-.806.108-1.204-.165-.397-.505-.71-.93-.78l-.894-.15c-.542-.09-.94-.56-.94-1.109v-1.094c0-.55.398-1.02.94-1.11l.894-.149c.424-.07.765-.383.93-.78.165-.398.143-.854-.107-1.204l-.527-.738a1.125 1.125 0 01.12-1.45l.773-.773a1.125 1.125 0 011.45-.12l.737.527c.35.25.807.272 1.204.107.397-.165.71-.505.78-.929l.15-.894z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              </button>
+            </div>
+            <div class="tabs">
+              <button type="button" aria-selected="true">All</button>
+              <button type="button">Mentions</button>
+            </div>
+            <div class="notice-row">
+              <i class="notice-mark" data-icon="UserPlusIcon">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 7.5v3m0 0v3m0-3h3m-3 0h-3m-2.25-4.125a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zM4 19.235v-.11a6.375 6.375 0 0112.75 0v.109A12.318 12.318 0 0110.374 21c-2.331 0-4.512-.645-6.374-1.766z"/></svg>
+              </i>
+              <p><span class="tweet-name">Bob</span> followed you</p>
+            </div>
+            <div class="notice-row">
+              <i class="notice-mark" data-icon="BellIcon">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0"/></svg>
+              </i>
+              <p>New post notifications for <span class="tweet-name">@alice</span></p>
+            </div>
+          </div>
+          <div class="search-results-demo" data-pattern="search-results">
+            <div class="page-header">
+              <button type="button" class="icon-button" aria-label="Back" data-icon="ArrowLeftIcon">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"/></svg>
+              </button>
+              <form class="search" action="#" onsubmit="return false">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"/></svg>
+                <input type="search" value="design" aria-label="Search query">
+              </form>
+              <button type="button" class="icon-button" aria-label="More" data-icon="EllipsisHorizontalIcon">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM12.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM18.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0z"/></svg>
+              </button>
+            </div>
+            <div class="tabs is-five">
+              <button type="button" aria-selected="true">Top</button>
+              <button type="button">Latest</button>
+              <button type="button">People</button>
+              <button type="button">Media</button>
+              <button type="button">Lists</button>
+            </div>
+          </div>
+          <section class="aside-card" data-pattern="search-filters">
+            <h3 class="aside-title">Search filters</h3>
+            <p class="filter-legend">People</p>
+            <button type="button" class="filter-row is-on">From anyone <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg></button>
+            <button type="button" class="filter-row">People you follow</button>
+            <p class="filter-legend">Location</p>
+            <button type="button" class="filter-row is-on">Anywhere <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg></button>
+            <button type="button" class="filter-row">Near you</button>
+          </section>
           </div>
         </section>
       </main>
