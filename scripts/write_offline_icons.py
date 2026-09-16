@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
-"""Write showcase/icons from the already-fetched 62a9588 path snapshot. No network."""
+"""Maintainer-only, not part of the runtime contract.
+
+Write showcase/icons from the already-fetched 62a9588 path snapshot. No network.
+"""
 
 from __future__ import annotations
 

@@ -43,7 +43,9 @@ For each task: grep `showcase/site.css` for the selector column. Markup is in `s
 |---|---|---|---|
 | Avatar | `clone` | `[data-pattern="avatar"]` | `.avatar` |
 | Home shell | `clone` | `[data-pattern="home"]` | `.home-shell`, `.home-main` |
-| Tweet row | `clone` | `[data-pattern="tweet"]` | `.tweet-card`, `.hover-card`, `.accent-tab`, `.tweet-status`, `.tweet-verified`, `.tweet-more`, `.tweet-rail`, `.reply-line`, `.media-grid`, `.tweet-actions`, `.disc`, `.tweet-count`, `.like.is-liked`, `.retweet.is-retweeted` |
+| Tweet row | `clone` | `[data-pattern="tweet"]` | `.tweet-card`, `.hover-card`, `.accent-tab`, `.tweet-status`, `.tweet-verified`, `.tweet-more`, `.tweet-rail` |
+| Tweet actions | `clone` | `[data-pattern="tweet"]` | `.tweet-actions`, `.disc`, `.tweet-count`, `.like.is-liked`, `.retweet.is-retweeted` |
+| Tweet media + reply line | `clone` | `[data-pattern="tweet"]` | `.media-grid`, `.reply-line` |
 | Sidebar | `clone` | `[data-pattern="sidebar"]`, `[data-nav-icon]` | `.sidebar-demo`, `.logo-mark` |
 | Overflow menu | `clone` | `[data-pattern="menu"]` | `.menu-demo` |
 | Blur header | `clone` | `[data-pattern="header"]` | `.header-demo` |
@@ -58,19 +60,19 @@ For each task: grep `showcase/site.css` for the selector column. Markup is in `s
 | Float label | `clone` | `[data-pattern="float-label"]` | `.float-label-field`, `.float-label-count` |
 | Home composer | `clone` | `[data-pattern="home"]` `.home-main .composer` | `.home-main .composer` |
 | Aside search | `clone` | `[data-pattern="aside-search"]` | `.aside-search`, `.search-clear` |
-| Media grid 1 / 2 / 3 / 4 | `clone` | `[data-pattern="media-grid"]` | `.media-grid[data-count="1"]`, `.media-grid[data-count="2"]`, `.media-grid[data-count="3"]`, `.media-grid[data-count="4"]` |
+| Media grid | `clone` | `[data-pattern="media-grid"]` | `.media-grid` |
 | Empty cover fallback | `clone` | `[data-pattern="profile-empty"]` | `.profile-cover.is-empty` |
 | Action confirm modal | `clone` | `[data-pattern="action-modal"]` | `.action-modal`, `.action-modal-panel`, `.action-modal-main` |
 | Loading | `clone` | `[data-pattern="loading"]` | `.status-loading` |
 | Error | `clone` | `[data-pattern="error"]` | `.status-error` |
-| Composer progress bar | `clone` | `[data-pattern="progress-bar"]` | `.progress-bar`, `.progress-bar[data-state="ok"]`, `.progress-bar[data-state="warn"]`, `.progress-bar[data-state="over"]` |
+| Composer progress bar | `clone` | `[data-pattern="progress-bar"]` | `.progress-bar` |
 | Stats empty | `clone` | `[data-pattern="stats-empty"]` | `.stats-empty` |
 | User hover-card | `clone` | `[data-pattern="user-hover"]` | `.user-hover-host`, `.user-hover-card`, `.user-hover-cover.is-empty`, `.user-follows-you` |
-| Edit profile modal | `clone` | `[data-pattern="edit-profile"]` | `.edit-profile`, `.edit-profile-cover`, `.edit-profile-camera` |
+| Edit profile modal | `clone` | `[data-pattern="edit-profile"]` | `.edit-profile-cover`, `.edit-profile-camera` |
 | Username modal | `clone` | `[data-pattern="username-modal"]` | `.username-modal`, `.username-modal-main`, `.username-modal-skip` |
-| Mobile sidebar | `clone` | `[data-pattern="mobile-sidebar"]` | `.mobile-sidebar`, `.mobile-sidebar-panel` |
+| Mobile sidebar | `clone` | `[data-pattern="mobile-sidebar"]` | `.mobile-sidebar-panel` |
 | Reply modal | `clone` | `[data-pattern="reply-modal"]` | `.reply-modal`, `.reply-modal-panel` |
-| Stats modal | `clone` | `[data-pattern="stats-modal"]` | `.stats-modal`, `.stats-modal-header` |
+| Stats modal | `clone` | `[data-pattern="stats-modal"]` | `.stats-modal-header` |
 | Clone auth landing | `clone` | `[data-pattern="auth-landing-clone"]` | `.auth-landing-clone`, `.auth-clone-banner` |
 | Sidebar logout popover | `clone` | `[data-pattern="logout-popover"]` | `.logout-popover`, `.logout-caret` |
 | Clone More menu | `clone` | `[data-pattern="clone-more"]` | `.clone-more-demo` |
@@ -81,6 +83,8 @@ For each task: grep `showcase/site.css` for the selector column. Markup is in `s
 | Composer preview 4-up | `clone` | `[data-pattern="composer-preview"]` | `.composer-preview-demo`, `.media-remove` |
 | Status count text | `clone` | `[data-pattern="status-counts"]` | `.status-counts` |
 | Missing account | `clone` | `[data-pattern="account-missing"]` | `.account-missing` |
+
+Media grid: keep `.media-grid`; `data-count` is 1–4. Progress bar: keep `.progress-bar`; `data-state` is `ok` / `warn` / `over`.
 
 ### Patterns — x.com extract 2026-09-16
 
