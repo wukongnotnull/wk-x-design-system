@@ -9,13 +9,19 @@ Apply the distilled X tokens and control recipes. Do not invent a "Twitter look.
 
 ## Provenance
 
-Snapshot distilled from https://github.com/ccrsxx/twitter-clone at commit `62a9588`: `globals.scss`, `tailwind.config.js`, the Heroicons 2.0.11 outline set the clone imports, and its tweet, input, sidebar, aside, user (profile / hover-card / nav / details), modal, and status components. The catalog holds 63 `data-pattern` demos plus the control row; [examples.md](examples.md) lists every one. Extra live glyphs (`XLogoIcon`, `GrokIcon`, `PremiumIcon`, and other rail extras) sit next to the pin set. Default logo stays `TwitterIcon` (bird).
+Two pinned sources. Both live in [showcase/](showcase/); neither is re-fetched.
 
-**Source of truth is [showcase/](showcase/)** next to this file — not live x.com, not `twitter-clone` main, not memory.
+1. **Clone pin** — https://github.com/ccrsxx/twitter-clone at commit `62a9588`: `globals.scss`, `tailwind.config.js`, the Heroicons 2.0.11 glyphs the clone imports (outline, plus solid `CheckBadgeIcon`), its `custom-icon.tsx` glyphs, the two rasters in `showcase/assets/`, and its tweet, input, sidebar, aside, user (profile / hover-card / nav / details), modal, and status components.
+2. **x.com extract** — a logged-in x.com session captured 2026-09-16: the glyphs `manifest.json` marks `source: "x.com logged-in extract 2026-09-16"` (`XLogoIcon`, `GrokIcon`, `PremiumIcon`, `ViewsIcon`, and other rail extras) and the current-X patterns (Grok, Premium, Articles, Communities, Messages, Notifications, Explore, Display modal, Poll, topic tabs, account switcher, Today's News, search results / filters, views + bookmark, post detail), rebuilt on the clone's tokens.
 
-- Do not clone, fetch, or re-distill the GitHub repo unless the user asks to refresh the snapshot
+Every `data-pattern` in the catalog has a row in [examples.md](examples.md); its `Source` column says which era a row belongs to. Use x.com-era patterns and glyphs only when the user asks for current-X chrome or names x.com; otherwise stay on clone-era patterns, and do not mix eras inside one component. Default logo stays `TwitterIcon` (bird); `XLogoIcon` is the geometric X-mark for x.com-era chrome, not a logo swap.
+
+**Source of truth is [showcase/](showcase/)** next to this file — not `twitter-clone` main, not today's x.com, not memory. If the user asks to compare against live x.com, treat the live page as the reference and still write the result with showcase tokens and recipes.
+
+- Do not clone, fetch, or re-distill the GitHub repo, and do not re-extract x.com, unless the user asks to refresh a pin
 - Do not vendor Chirp `.woff2`, React, Vite, Tailwind, or Firebase
-- Do not `npm install` `@heroicons/react`. Copy SVG from [showcase/icons/](showcase/icons/) (`manifest.json` + `*.svg` at `62a9588`). Do not invent paths
+- Do not `npm install` `@heroicons/react`. Copy SVG from [showcase/icons/](showcase/icons/); `manifest.json` records `source` per icon (`heroicons@2.0.11`, `custom-icon.tsx@62a9588`, or `x.com logged-in extract 2026-09-16`) and `variant` (`outline`, `solid`, `custom`). Do not invent paths
+- Rasters: [showcase/assets/](showcase/assets/) holds `no-likes.png` and `twitter-banner.png`, byte-identical to the clone's `public/assets/` at `62a9588`; [showcase/assets/manifest.json](showcase/assets/manifest.json) records source, date, and license. Do not download others
 - After changing anything under `showcase/` or `examples.md`, run `python3 scripts/check_showcase.py` — it pins tokens, cross-checks every `examples.md` row against `site.css` / `index.html`, and runs the showcase unittest suite
 
 ## Resolve the showcase
@@ -24,7 +30,7 @@ Read files under `showcase/` beside this `SKILL.md`. Resolve the path from the d
 
 - Required: [showcase/tokens.css](showcase/tokens.css), [showcase/site.css](showcase/site.css), [showcase/index.html](showcase/index.html), [showcase/icons/](showcase/icons/)
 
-Task → section → selector: [examples.md](examples.md). Grep `showcase/site.css` for the listed class. Do not read the whole stylesheet unless the selector block is incomplete.
+Task → source → selector: [examples.md](examples.md). Grep `showcase/site.css` for the listed class. Do not read the whole stylesheet unless the selector block is incomplete.
 
 ## Defaults
 
@@ -62,15 +68,16 @@ Copy [showcase/tokens.css](showcase/tokens.css) **verbatim**. Do not reassign `-
 4. Grep [showcase/site.css](showcase/site.css) for those selectors; reuse class names and values
 5. Adapt markup to the product; do not change color, type, radius, or spacing tokens
 6. For icons, copy the matching file from [showcase/icons/](showcase/icons/). Tweet actions: `ChatBubbleOvalLeftIcon`, `ArrowPathRoundedSquareIcon`, `HeartIcon`, `ArrowUpTrayIcon` (Heroicons 2.0.11 outline, 20×20, `stroke-width="1.5"`). Logo at this pin is `TwitterIcon` (bird), not the later X-mark
-7. Include only the controls the task needs. Do not ship the theme picker or `theme.js` unless the user asked for live theme / accent switching
-8. Modals, tooltip, hover-card, and lightbox in the catalog are static open states. Copy the chrome; wire open / close, focus, and `Escape` in the product's own framework
-9. No network, no npm, no Chirp, no Firebase
+7. Rasters: only `showcase/assets/*.png`, only for the two patterns that use them (`stats-empty`, `auth-landing-clone`). Do not download others
+8. Include only the controls the task needs. Do not ship the theme picker or `theme.js` unless the user asked for live theme / accent switching
+9. Modals, tooltip, hover-card, and lightbox in the catalog are static open states. Copy the chrome; wire open / close, focus, and `Escape` in the product's own framework
+10. No network, no npm, no Chirp, no Firebase
 
 ## Common mistakes
 
 | Rationalization | Do this |
 |---|---|
-| "I'll pull latest twitter-clone / x.com" | Use `showcase/` at `62a9588`. Refresh only if the user asks |
+| "I'll pull latest twitter-clone / x.com" | Use `showcase/`: clone pin `62a9588` plus the 2026-09-16 x.com extract. Refresh only if the user asks |
 | "Classic Twitter blue is #1DA1F2" | Use `--accent-blue: 29 155 240` (`#1D9BF0`) |
 | "Need Chirp to look official" | Distillation dropped Chirp. Use the system stack |
 | "I'll freehand a dark card" | Copy `.tweet-card` / `.composer` from `showcase/site.css` |
@@ -89,5 +96,6 @@ Copy [showcase/tokens.css](showcase/tokens.css) **verbatim**. Do not reassign `-
 - Search focus ring that is not `box-shadow: 0 0 0 2px rgb(var(--main-accent))`
 - Selected tab underline that is not `inset 0 -4px 0 rgb(var(--main-accent))`
 - `--main-accent` set to anything but `--accent-blue` when the user did not name an accent
-- Network fetch of github.com/ccrsxx/twitter-clone or x.com for tokens
+- Network fetch of github.com/ccrsxx/twitter-clone or x.com for tokens, patterns, icons, or images — both pins are already in `showcase/`
 - Invented icon paths, or `npm install` `@heroicons/react` instead of `showcase/icons/`
+- Any `<img src>` that points outside `showcase/assets/`
