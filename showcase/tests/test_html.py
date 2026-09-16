@@ -114,6 +114,15 @@ class HtmlChromeTest(unittest.TestCase):
             "mobile-sidebar",
             "reply-modal",
             "stats-modal",
+            "auth-landing",
+            "login-modal",
+            "signup-aside",
+            "profile-mention",
+            "page-header",
+            "quote-embed",
+            "video-media",
+            "tweet-metrics",
+            "post-detail",
         ):
             self.assertIn(f'data-pattern="{pattern}"', html)
         self.assertIn("Pinned Tweet", html)
@@ -715,6 +724,90 @@ class HtmlChromeTest(unittest.TestCase):
         self.assertIn("stats-empty", modal)
         self.assertIn(".stats-modal", css)
         self.assertIn(".stats-modal-header", css)
+
+    def test_auth_landing_and_login_modal(self):
+        html = (ROOT / "index.html").read_text(encoding="utf-8")
+        css = (ROOT / "site.css").read_text(encoding="utf-8")
+        landing = html[html.index('data-pattern="auth-landing"') :]
+        self.assertIn("Happening now.", landing)
+        self.assertIn("Continue with phone", landing)
+        self.assertIn("Continue with Google", landing)
+        self.assertIn("Continue with Apple", landing)
+        self.assertIn("Email or username", landing)
+        self.assertIn("btn-social", landing)
+        self.assertIn("auth-field", landing)
+        self.assertIn("btn-continue", landing)
+        self.assertIn("auth-or", landing)
+        self.assertIn("M24 9.5c3.54 0 6.71 1.22", landing)
+        self.assertIn("M16.365 1.43c0 1.14", landing)
+        modal = html[html.index('data-pattern="login-modal"') :]
+        self.assertIn("See what's happening", modal)
+        self.assertIn("login-modal-backdrop", modal)
+        self.assertIn("login-modal-panel", modal)
+        self.assertIn('aria-label="Back"', modal)
+        aside = html[html.index('data-pattern="signup-aside"') :]
+        self.assertIn("Log in or sign up for X", aside)
+        self.assertIn("Log in with username or email", aside)
+        self.assertIn(".auth-landing", css)
+        self.assertIn(".btn-social", css)
+        self.assertIn(".auth-field", css)
+        self.assertIn(".btn-continue", css)
+        self.assertIn(".auth-or", css)
+        self.assertIn(".login-modal", css)
+        self.assertIn(".login-modal-panel", css)
+        self.assertIn(".login-modal-backdrop", css)
+        self.assertIn("box-shadow: 0 0 0 2px rgb(var(--main-accent))", css)
+
+    def test_profile_mention_and_page_header(self):
+        html = (ROOT / "index.html").read_text(encoding="utf-8")
+        css = (ROOT / "site.css").read_text(encoding="utf-8")
+        mention = html[html.index('data-pattern="profile-mention"') :]
+        self.assertIn("Mention", mention)
+        self.assertIn("btn-outline", mention)
+        self.assertIn("btn-follow", mention)
+        header = html[html.index('data-pattern="page-header"') :]
+        self.assertIn("15.7K posts", header)
+        self.assertIn("is-gold", header)
+        self.assertIn('aria-label="Refresh"', header)
+        self.assertIn('aria-label="Search"', header)
+        self.assertIn(".btn-outline", css)
+        self.assertIn(".page-header", css)
+        self.assertIn(".tweet-verified.is-gold", css)
+        self.assertIn("fill: rgb(var(--accent-yellow))", css)
+
+    def test_quote_video_metrics_and_status(self):
+        html = (ROOT / "index.html").read_text(encoding="utf-8")
+        css = (ROOT / "site.css").read_text(encoding="utf-8")
+        quote = html[html.index('data-pattern="quote-embed"') :]
+        self.assertIn("quote-embed", quote)
+        self.assertIn("Grok Bot", quote)
+        self.assertIn("good bot", quote)
+        video = html[html.index('data-pattern="video-media"') :]
+        self.assertIn("video-play", video)
+        self.assertIn("video-duration", video)
+        self.assertIn("08:44:53", video)
+        self.assertIn("M12.538 6.478", video)
+        metrics = html[html.index('data-pattern="tweet-metrics"') :]
+        self.assertIn('class="views"', metrics)
+        self.assertIn('class="bookmark"', metrics)
+        self.assertIn("699K", metrics)
+        self.assertIn("M3 13.125C3 12.504", metrics)
+        self.assertIn("M17.593 3.322", metrics)
+        self.assertIn('class="status-detail" data-pattern="post-detail"', html)
+        detail = html[html.index('data-pattern="post-detail"') :]
+        self.assertIn("is-status", detail)
+        self.assertIn("status-time", detail)
+        self.assertIn("Tweet your reply", detail)
+        self.assertIn(".quote-embed", css)
+        self.assertIn(".video-media", css)
+        self.assertIn(".video-play", css)
+        self.assertIn(".video-duration", css)
+        self.assertIn(".tweet-actions.is-wide", css)
+        self.assertIn(".tweet-actions .views", css)
+        self.assertIn(".tweet-actions .bookmark", css)
+        self.assertIn(".status-detail", css)
+        self.assertIn(".tweet-card.is-status", css)
+        self.assertIn(".status-time", css)
 
     # Responsive recipe — clone 62a9588 screens: xs 500, md 768, lg 1024, xl 1280.
 

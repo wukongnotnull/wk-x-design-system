@@ -2164,6 +2164,367 @@ html[data-theme="dim"] .user-hover-card {
   border-bottom: 1px solid var(--border);
 }
 
+.auth-landing-demo,
+.login-modal-demo,
+.signup-aside,
+.profile-mention-demo,
+.page-header,
+.quote-embed-demo,
+.video-media-demo,
+.tweet-metrics-demo,
+.status-detail {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-2xl);
+  overflow: hidden;
+  background: rgb(var(--main-background));
+}
+
+.auth-landing,
+.login-modal-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 24rem;
+  margin: 0 auto;
+  padding: 32px;
+}
+
+.auth-landing > i,
+.auth-landing > i svg,
+.login-modal-brand,
+.login-modal-brand svg {
+  display: block;
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+  color: var(--twitter-icon);
+}
+
+.auth-landing h2,
+.login-modal-panel h2 {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 800;
+}
+
+.login-modal-panel h2 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.auth-landing .auth-legal,
+.login-modal-panel > p,
+.signup-aside > p {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.auth-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.btn-auth {
+  width: 100%;
+  min-width: 0;
+}
+
+.btn-social {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  padding: 8px 16px;
+  font-weight: 700;
+  background: #ffffff;
+  color: #0F1419;
+  cursor: pointer;
+  transition: color 200ms, background-color 200ms, border-color 200ms;
+}
+
+html[data-theme="lights-out"] .btn-social,
+html[data-theme="dim"] .btn-social {
+  background: #EFF3F4;
+  color: #0F1419;
+}
+
+.btn-social svg {
+  width: 20px;
+  height: 20px;
+  display: block;
+}
+
+.btn-continue {
+  width: 100%;
+  border: 0;
+  border-radius: var(--radius-full);
+  padding: 8px 16px;
+  font-weight: 700;
+  background: var(--border);
+  color: var(--text-secondary);
+  cursor: not-allowed;
+}
+
+.auth-or {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.auth-or::before,
+.auth-or::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+.auth-field {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 16px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-2xl);
+  background: rgb(var(--main-background));
+  color: var(--text-primary);
+  font: inherit;
+}
+
+.auth-field:focus {
+  outline: none;
+  border-color: rgb(var(--main-accent));
+  box-shadow: 0 0 0 2px rgb(var(--main-accent));
+}
+
+.login-modal-demo {
+  position: relative;
+  min-height: 520px;
+}
+
+.login-modal {
+  position: relative;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 520px;
+  padding: 16px;
+}
+
+.login-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgb(0 0 0 / 0.4);
+}
+
+html[data-theme="lights-out"] .login-modal-backdrop,
+html[data-theme="dim"] .login-modal-backdrop {
+  background: rgb(91 112 131 / 0.4);
+}
+
+.login-modal-panel {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  border-radius: var(--radius-2xl);
+  background: rgb(var(--main-background));
+}
+
+.login-modal-header {
+  display: grid;
+  grid-template-columns: 36px 1fr 36px;
+  align-items: center;
+}
+
+.signup-aside {
+  width: min(100%, 384px);
+  padding: 16px;
+}
+
+.signup-aside .aside-title {
+  margin-bottom: 4px;
+}
+
+.profile-mention-demo {
+  display: flex;
+  justify-content: flex-end;
+  padding: 12px 16px;
+}
+
+.btn-outline {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  padding: 6px 16px;
+  min-width: 106px;
+  font-weight: 700;
+  cursor: pointer;
+  background: transparent;
+  color: var(--text-primary);
+  transition: color 200ms, background-color 200ms, border-color 200ms;
+}
+
+.btn-outline:hover {
+  background: rgb(231 233 234 / 0.1);
+}
+
+html[data-theme="default"] .btn-outline:hover {
+  background: rgb(15 20 25 / 0.1);
+}
+
+.page-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 8px 16px;
+  background: rgb(var(--main-background) / 0.6);
+  backdrop-filter: blur(12px);
+}
+
+.page-header-main {
+  flex: 1;
+  min-width: 0;
+}
+
+.page-header-main p {
+  margin: 0;
+}
+
+.tweet-verified.is-gold svg {
+  fill: rgb(var(--accent-yellow));
+}
+
+.quote-embed-demo,
+.tweet-metrics-demo,
+.status-detail {
+  padding: 0;
+}
+
+.quote-embed {
+  margin-top: 12px;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-2xl);
+}
+
+.quote-embed .tweet-body {
+  margin-top: 4px;
+}
+
+.video-media-demo {
+  padding: 12px;
+}
+
+.video-media {
+  position: relative;
+  overflow: hidden;
+  height: 271px;
+  border-radius: var(--radius-2xl);
+  background: rgb(var(--accent-blue) / 0.35);
+}
+
+.video-play {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border: 0;
+  border-radius: var(--radius-full);
+  background: rgb(15 20 25 / 0.6);
+  color: #e7e9ea;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+.video-play svg {
+  width: 24px;
+  height: 24px;
+  display: block;
+  transform: rotate(90deg);
+}
+
+.video-duration {
+  position: absolute;
+  left: 8px;
+  bottom: 8px;
+  padding: 2px 6px;
+  border-radius: var(--radius-md);
+  background: rgb(15 20 25 / 0.6);
+  color: #e7e9ea;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.tweet-metrics-demo {
+  padding: 12px 16px;
+}
+
+.tweet-actions.is-wide {
+  max-width: none;
+}
+
+.tweet-actions .views:hover,
+.tweet-actions .bookmark:hover {
+  color: rgb(var(--accent-blue));
+}
+
+.tweet-actions .views:hover .disc,
+.tweet-actions .bookmark:hover .disc {
+  background: rgb(var(--accent-blue) / 0.1);
+}
+
+.tweet-actions .views:active .disc,
+.tweet-actions .bookmark:active .disc {
+  background: rgb(var(--accent-blue) / 0.2);
+}
+
+.tweet-actions .views:focus-visible .disc,
+.tweet-actions .bookmark:focus-visible .disc {
+  outline: 2px solid rgb(var(--accent-blue) / 0.8);
+}
+
+.status-detail .page-header {
+  border: 0;
+  border-bottom: 1px solid var(--border);
+  border-radius: 0;
+}
+
+.status-detail .tweet-card.is-status {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border-bottom: 1px solid var(--border);
+}
+
+.status-identity {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.status-time {
+  margin: 0;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.status-detail .composer {
+  border: 0;
+}
+
 /* ------------------------------------------------------------------
    Responsive Home shell — clone 62a9588 tailwind screens:
    xs 500px · md 768px · lg 1024px · xl 1280px

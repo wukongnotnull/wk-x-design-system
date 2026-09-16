@@ -52,6 +52,15 @@ For each task: grep `showcase/site.css` for the selector column. Markup is in `s
 | Mobile sidebar | `#patterns` | `[data-pattern="mobile-sidebar"]` | `.mobile-sidebar`, `.mobile-sidebar-panel` |
 | Reply modal | `#patterns` | `[data-pattern="reply-modal"]` | `.reply-modal`, `.reply-modal-panel` |
 | Stats modal | `#patterns` | `[data-pattern="stats-modal"]` | `.stats-modal`, `.stats-modal-header` |
+| Auth landing | `#patterns` | `[data-pattern="auth-landing"]` | `.auth-landing`, `.btn-social`, `.auth-field`, `.btn-continue`, `.auth-or` |
+| Login modal | `#patterns` | `[data-pattern="login-modal"]` | `.login-modal`, `.login-modal-panel`, `.login-modal-backdrop` |
+| Signup aside | `#patterns` | `[data-pattern="signup-aside"]` | `.signup-aside`, `.btn-social` |
+| Profile Mention + Follow | `#patterns` | `[data-pattern="profile-mention"]` | `.btn-outline`, `.profile-mention-demo` |
+| Page header | `#patterns` | `[data-pattern="page-header"]` | `.page-header`, `.tweet-verified.is-gold` |
+| Quote embed | `#patterns` | `[data-pattern="quote-embed"]` | `.quote-embed` |
+| Video media | `#patterns` | `[data-pattern="video-media"]` | `.video-media`, `.video-play`, `.video-duration` |
+| Views + bookmark | `#patterns` | `[data-pattern="tweet-metrics"]` | `.tweet-actions.is-wide`, `.tweet-actions .views`, `.tweet-actions .bookmark` |
+| Post detail | `#patterns` | `[data-pattern="post-detail"]` | `.status-detail`, `.tweet-card.is-status`, `.status-time` |
 | Hide catalog rail < 500px | layout | `#rail` | `@media (max-width: 499px)` |
 | Responsive: icon-only sidebar < 1280 (xl) | `#patterns` | `[data-pattern="sidebar"]`, `.nav-label`, `.nav-feather` | `@media (max-width: 1279px)`, `.sidebar-demo .nav-label`, `.sidebar-demo .nav-feather` |
 | Responsive: sidebar 96px at 768–1279 (md) | `#patterns` | `[data-pattern="sidebar"]` | `@media (min-width: 768px) and (max-width: 1279px)` |
