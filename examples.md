@@ -68,6 +68,8 @@ For each task: grep `showcase/site.css` for the selector column. Markup is in `s
 | Notifications | `#patterns` | `[data-pattern="notifications"]` | `.notifications-demo`, `.notice-row`, `.notice-mark` |
 | Search results | `#patterns` | `[data-pattern="search-results"]` | `.search-results-demo` |
 | Search filters | `#patterns` | `[data-pattern="search-filters"]` | `.filter-row`, `.filter-legend`, `.filter-row.is-on` |
+| Direct Messages | `#patterns` | `[data-pattern="messages"]` | `.messages-demo`, `.messages-list`, `.messages-pane`, `.messages-row` |
+| Poll composer | `#patterns` | `[data-pattern="poll"]` | `.poll-modal`, `.poll-choice`, `.poll-length`, `.poll-remove` |
 | Hide catalog rail < 500px | layout | `#rail` | `@media (max-width: 499px)` |
 | Responsive: icon-only sidebar < 1280 (xl) | `#patterns` | `[data-pattern="sidebar"]`, `.nav-label`, `.nav-feather` | `@media (max-width: 1279px)`, `.sidebar-demo .nav-label`, `.sidebar-demo .nav-feather` |
 | Responsive: sidebar 96px at 768–1279 (md) | `#patterns` | `[data-pattern="sidebar"]` | `@media (min-width: 768px) and (max-width: 1279px)` |

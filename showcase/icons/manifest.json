@@ -58,6 +58,12 @@
       "file": "ArrowUpTrayIcon.svg"
     },
     {
+      "id": "ArticlesIcon",
+      "source": "x.com logged-in extract 2026-09-16",
+      "variant": "custom",
+      "file": "ArticlesIcon.svg"
+    },
+    {
       "id": "Bars3BottomLeftIcon",
       "source": "heroicons@2.0.11",
       "variant": "outline",
@@ -116,6 +122,12 @@
       "source": "heroicons@2.0.11",
       "variant": "outline",
       "file": "ChatBubbleOvalLeftIcon.svg"
+    },
+    {
+      "id": "ChatIcon",
+      "source": "x.com logged-in extract 2026-09-16",
+      "variant": "custom",
+      "file": "ChatIcon.svg"
     },
     {
       "id": "CheckBadgeIcon",
@@ -202,6 +214,12 @@
       "file": "GoogleIcon.svg"
     },
     {
+      "id": "GrokIcon",
+      "source": "x.com logged-in extract 2026-09-16",
+      "variant": "custom",
+      "file": "GrokIcon.svg"
+    },
+    {
       "id": "HashtagIcon",
       "source": "heroicons@2.0.11",
       "variant": "outline",
@@ -212,6 +230,12 @@
       "source": "heroicons@2.0.11",
       "variant": "outline",
       "file": "HeartIcon.svg"
+    },
+    {
+      "id": "HistoryIcon",
+      "source": "x.com logged-in extract 2026-09-16",
+      "variant": "custom",
+      "file": "HistoryIcon.svg"
     },
     {
       "id": "HomeIcon",
@@ -236,6 +260,12 @@
       "source": "heroicons@2.0.11",
       "variant": "outline",
       "file": "MapPinIcon.svg"
+    },
+    {
+      "id": "MoneyIcon",
+      "source": "x.com logged-in extract 2026-09-16",
+      "variant": "custom",
+      "file": "MoneyIcon.svg"
     },
     {
       "id": "PaintBrushIcon",
@@ -266,6 +296,18 @@
       "source": "heroicons@2.0.11",
       "variant": "outline",
       "file": "PlusIcon.svg"
+    },
+    {
+      "id": "PollIcon",
+      "source": "x.com logged-in extract 2026-09-16",
+      "variant": "custom",
+      "file": "PollIcon.svg"
+    },
+    {
+      "id": "PremiumIcon",
+      "source": "x.com logged-in extract 2026-09-16",
+      "variant": "custom",
+      "file": "PremiumIcon.svg"
     },
     {
       "id": "QuestionMarkCircleIcon",
@@ -326,6 +368,12 @@
       "source": "heroicons@2.0.11",
       "variant": "outline",
       "file": "UserPlusIcon.svg"
+    },
+    {
+      "id": "XLogoIcon",
+      "source": "x.com logged-in extract 2026-09-16",
+      "variant": "custom",
+      "file": "XLogoIcon.svg"
     },
     {
       "id": "XMarkIcon",

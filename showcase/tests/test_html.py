@@ -130,6 +130,8 @@ class HtmlChromeTest(unittest.TestCase):
             "notifications",
             "search-results",
             "search-filters",
+            "messages",
+            "poll",
         ):
             self.assertIn(f'data-pattern="{pattern}"', html)
         self.assertIn("Pinned Tweet", html)
@@ -875,6 +877,35 @@ class HtmlChromeTest(unittest.TestCase):
         self.assertIn(".filter-row", css)
         self.assertIn(".filter-row.is-on", css)
         self.assertIn("color: rgb(var(--main-accent))", css)
+
+    def test_messages_and_poll_chrome(self):
+        html = (ROOT / "index.html").read_text(encoding="utf-8")
+        css = (ROOT / "site.css").read_text(encoding="utf-8")
+        inbox = html[html.index('data-pattern="messages"') : html.index('data-pattern="poll"')]
+        self.assertIn("Chat", inbox)
+        self.assertIn("Start a conversation", inbox)
+        self.assertIn("New chat", inbox)
+        self.assertIn("Search messages", inbox)
+        self.assertIn("M20.7 11.7c0-4.48", inbox)
+        poll = html[html.index('data-pattern="poll"') :]
+        self.assertIn("Ask a question", poll)
+        self.assertIn("Choice 1", poll)
+        self.assertIn("Choice 2", poll)
+        self.assertIn("Poll length", poll)
+        self.assertIn("Remove poll", poll)
+        self.assertIn("Everyone can reply", poll)
+        self.assertIn("M6 5c-1.1 0-2 .895-2 2s.9 2 2 2", poll)
+        self.assertIn("Grok", html)
+        self.assertIn("Premium", html)
+        self.assertIn('data-icon="XLogoIcon"', html)
+        self.assertIn("M21.742 21.75l-7.563-11.179", html)
+        self.assertIn("M23.643 4.937c-.835.37", html)
+        self.assertIn(".messages-demo", css)
+        self.assertIn(".messages-pane", css)
+        self.assertIn(".poll-modal", css)
+        self.assertIn(".poll-choice", css)
+        self.assertIn(".poll-remove", css)
+        self.assertIn("color: rgb(var(--accent-red))", css)
 
     # Responsive recipe — clone 62a9588 screens: xs 500, md 768, lg 1024, xl 1280.
 
